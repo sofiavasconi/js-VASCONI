@@ -1,4 +1,5 @@
-let numero = parseInt(prompt("Ingrese un numero para repetir el mensaje"));
+let numero = parseInt(prompt("Ingresa un numero para repetir el mensaje"));
 for (let i=1; i<=numero; i++) {
     alert("Hola");
+    console.log("Hola");
 }
