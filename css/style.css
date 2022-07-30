@@ -34,20 +34,13 @@ h1 {
     font-size: 90px;
 }
 
+
+
 h4 {
     color: #000000;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 40px;
-}
-
-
-h3 {
-    color: #000000;
-    font-family: 'Raleway', sans-serif;
-    font-size: 30px; 
-    margin-top: 5%;
-    text-align: center;
 }
 
 
@@ -101,9 +94,41 @@ h3 {
 
 
 
+h3 {
+    color: #000000;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px; 
+    margin-top: 5%;
+    text-align: center;
+}
+
+
+.productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 13%;
+}
+
+.bocaTitular, .bocaSuplente {
+    width:  500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+
+.subtitulo {
+    color: #000000;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+}
+
+
 .logoFooter {
     display: flex;
     margin-left: 45%;
     width: 10%;
     height: 5%;
+    margin-top: 5%;
 }
