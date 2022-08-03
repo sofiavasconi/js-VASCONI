@@ -26,12 +26,16 @@ nacionales.push ("huracan"); {
 }
 
 
-const selecciones = ["argentina", "brasil", "uruguay", "italia", "francia", "alemania", "inglaterra", "españa"]; {
+const selecciones = ["brasil", "uruguay", "italia", "francia", "alemania", "inglaterra", "españa"]; 
+
+selecciones.unshift ("argentina");{
 
     console.log (selecciones);
 }
 
-const internacionales = ["psg", "barcelona", "real madrid", "juventus", "inter", "manchester city", "manchester united","liverpool", "bayern munich", "flamengo", "palmeiras"]; {
+const internacionales = ["psg", "barcelona", "real madrid", "juventus", "inter", "manchester city", "manchester united","liverpool", "bayern munich", "flamengo", "palmeiras", "mineiro"]; 
+
+internacionales.pop ();{
 
     console.log (internacionales);
     }
