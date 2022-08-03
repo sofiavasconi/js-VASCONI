@@ -13,3 +13,26 @@ if (camiseta === 1) {
 }else{
     alert ("ERROR. Debe introducir 1 o 2 en la primera ventana.");
 }
+
+
+
+
+
+const nacionales = ["boca", "river", "racing", "independiente", "san lorenzo", "velez"];
+
+nacionales.push ("huracan"); {
+
+    console.log (nacionales);
+}
+
+
+const selecciones = ["argentina", "brasil", "uruguay", "italia", "francia", "alemania", "inglaterra", "españa"]; {
+
+    console.log (selecciones);
+}
+
+const internacionales = ["psg", "barcelona", "real madrid", "juventus", "inter", "manchester city", "manchester united","liverpool", "bayern munich", "flamengo", "palmeiras"]; {
+
+    console.log (internacionales);
+    }
+
