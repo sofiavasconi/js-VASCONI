@@ -18,7 +18,7 @@ html, body {
 }
 
 
-a {
+i {
     color: #ffffff;
     font-family: 'Raleway', sans-serif;
     font-size: 20px; 
@@ -37,15 +37,14 @@ a {
     margin-top: 15%;
 }
 
-h1 {
-    color: #000000;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    font-size: 90px;
+
+.welcomePage-logo {
+    width: 50%;
+    margin-left: 25%;
 }
 
 
-h4 {
+h1 {
     color: #000000;
     text-align: center;
     font-family: 'Raleway', sans-serif;
@@ -80,7 +79,7 @@ h4 {
     border-radius: 10px;
     width: 50%;
     margin-left: 25%;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 
@@ -117,7 +116,7 @@ h4 {
 h3 {
     color: #000000;
     font-family: 'Raleway', sans-serif;
-    font-size: 25px; 
+    font-size: 35px; 
     margin-top: 5%;
     text-align: center;
 }
@@ -126,22 +125,62 @@ h3 {
 .productos {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin-left: 13%;
+    justify-content: space-between;
+    margin-top: 3%;
+    text-align: center;
+    position: relative;
 }
 
-.bocaTitular, .bocaSuplente {
-    width:  500px;
-    height: 500px;
-    object-fit: cover;
+.nacional {
+    margin-left: 3%;
+}
+.internacional {
+    margin-right: 3%;
+}
+
+.nacionalImg, .seleccionImg, .internacionalImg {
+    transition: transform .2s;
 }
 
 
-.subtitulo {
-    color: #000000;
-    align-items: center;
+.nacionalImg:hover,.seleccionImg:hover, .internacionalImg:hover {
+    transform: scale(1.1);
+}
+
+
+.subtituloN {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-family: 'Raleway', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
+}
+
+
+.subtituloS {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+}
+
+
+.subtituloI {
+    position: absolute;
+    top: 50%;
+    left: 83%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
 }
 
 
