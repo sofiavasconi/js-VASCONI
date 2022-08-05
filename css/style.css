@@ -34,6 +34,7 @@ a {
 .welcomePage-info {
     width: 50%;
     justify-content: center;
+    margin-top: 15%;
 }
 
 h1 {
@@ -54,21 +55,14 @@ h4 {
 
 .welcomePage-img {
     width: 50%;
-    justify-content: center;
+    justify-content: center;    
+    background-color: #00C9FF;
 }
 
 
 .welcomeImg {
-    width: 60%;
-    height: 30%;
+    width: 87%;
 }
-
-
-.messi {
-    width: 40%;
-    height: 50%;
-}
-
 
 
 .grid-info {
