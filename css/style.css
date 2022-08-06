@@ -184,6 +184,33 @@ h3 {
 }
 
 
+.catalogo {
+    width: 20%;
+    margin-left: 3%;
+}
+
+
+.h5 {
+    color: #000000;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px; 
+    text-align: center;
+    margin-left: 2%;
+}
+
+
+.h6 {
+    color: #00C9FF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px; 
+    text-align: center;
+    margin-left: 2%;
+}
+
+
+
+
+
 .logoFooter {
     display: flex;
     margin-left: 45%;
