@@ -184,29 +184,46 @@ h3 {
 }
 
 
-.catalogo {
-    width: 20%;
-    margin-left: 3%;
+.album {
+    background-color: #ffffff;
+    margin-top: 5%;
 }
 
 
-.h5 {
+.card {
+    display: inline-block;
+    width: 100%;
+    height: 50%;
+}
+
+.row {
+    width: 60%;
+    margin-left: 20%;
+}
+
+
+
+.card-img-top { 
+    width: 100%;
+    height: 100%; 
+    display: block;
+    object-fit: fill;
+}
+
+
+.card-text {
     color: #000000;
+    text-align: start;
     font-family: 'Raleway', sans-serif;
-    font-size: 20px; 
-    text-align: center;
-    margin-left: 2%;
+    font-size: 15px;
 }
 
-
-.h6 {
-    color: #00C9FF;
+.precio {
+    color: #038eb4;
+    text-align: start;
     font-family: 'Raleway', sans-serif;
-    font-size: 20px; 
-    text-align: center;
-    margin-left: 2%;
+    font-size: 15px;
 }
-
 
 
 
