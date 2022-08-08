@@ -226,6 +226,14 @@ h3 {
 }
 
 
+.volver {
+    color: #000000;
+    text-align: start;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    margin-left: 2%;
+    text-decoration: none;
+}
 
 
 .logoFooter {

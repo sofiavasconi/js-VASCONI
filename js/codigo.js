@@ -75,10 +75,9 @@ const camisetasInt = [
 
 let ingreso = prompt ("inserte nac (nacional), sel (selección) o int (internacional) según el tipo de camiseta que quiera comprar.");
 
-while(ingreso != "nac" && ingreso != "sel" && ingreso != "int") {
-    alert ("inserte nac (nacional), sel (selección) o int (internacional) según el tipo de camiseta que quiera comprar.")
+if(ingreso != "nac" && ingreso != "sel" && ingreso != "int") {
+    alert ("ERROR")
 }
-
 
 if (ingreso === "nac") {
 
@@ -103,7 +102,7 @@ if (camiseta === 1) {
         let resultado = 6000 * cantidad;
         alert ("El precio total de tu compra es: $"+resultado);
 }else{
-    alert ("ERROR. Debe introducir 1 o 2 en la primera ventana.");
+    alert ("ERROR. Debe introducir 1 o 2.");
 }
 }else{
     if (ingreso === "sel") {
@@ -115,7 +114,6 @@ if (camiseta === 1) {
 
         alert (camisetasDeSeleccion)
 
-        
         let cantidad = parseInt(prompt("Ingrese cuántas camisetas quiere comprar."));
         {
         
@@ -140,7 +138,9 @@ if (camiseta === 1) {
                 alert ("El precio total de tu compra es: $"+resultado);
             }
         }
+        
     }
 }
+
 
 
