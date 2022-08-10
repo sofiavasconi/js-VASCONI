@@ -235,6 +235,10 @@ h3 {
     text-decoration: none;
 }
 
+.volver:hover {
+    color: #038eb4;
+}
+
 
 .logoFooter {
     display: flex;
