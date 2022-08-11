@@ -138,7 +138,6 @@ if (camiseta === 1) {
                 alert ("El precio total de tu compra es: $"+resultado);
             }
         }
-        
     }
 }
 
