@@ -1,5 +1,5 @@
 const camisetasNac = [
-    {categoria: "nacional", club: "boca", tipo: "titular", precio: 15000},
+    {categoriaBT: "nacional", clubBT: "boca", tipoBT: "titular", precioBT: 15000},
 
     {categoria: "nacional", club: "boca", tipo: "suplente", precio: 10000},
 
@@ -72,7 +72,7 @@ const camisetasInt = [
 
 ];
 
-
+/*
 let ingreso = prompt ("inserte nac (nacional), sel (selección) o int (internacional) según el tipo de camiseta que quiera comprar.");
 
 if(ingreso != "nac" && ingreso != "sel" && ingreso != "int") {
@@ -139,25 +139,29 @@ if (camiseta === 1) {
             }
         }
     }
-}
+}*/
 
 
 
-let boton = document.getElementById ("botonAgregar");
+let botonBT = document.getElementById ("botonAgregar");
+botonBT.className="btn btn-sm btn-outline-dark";
+botonBT.type = "button";
+botonBT.innerHTML = "<button>Agregar al carrito</button>"
+
+let boton = document.getElementById ("botonRT");
 boton.className="btn btn-sm btn-outline-dark";
 boton.innerHTML = "<button>Agregar al carrito</button>"
 
+const botonBS = document.createElement("botonBS");
+botonBS.className="btn btn-sm btn-outline-dark";
+botonBS.innerHTML = "<button>Agregar al carrito</button>"
+document.getElementById("botonBS").appendChild(botonBS);
 
 
-let tabla = document.createElement ("table");
-let tablaBody = document.createElement ("tbody")
-for(const producto of camisetasNac) {
-    carrito.innerHTML+= `
-                        <tr>
-                        <td>Club: ${camisetasNac.club}</td>
-                        <td>Tipo: ${camisetasNac.tipo}</td>
-                        <td>Precio $${camisetasNac.precio}</td>
-                        </tr>`;
-}
-tabla.append(tablaBody);
-let lista =document.getElementById ("listaCarrito");
+const botonesNac = document.createElement("botones");
+botonesNac.className="btn btn-sm btn-outline-dark";
+botonesNac.innerHTML = "<button>Agregar al carrito</button>"
+document.getElementsByClassName("botones").appendChild(botonesNac);
+
+
+
