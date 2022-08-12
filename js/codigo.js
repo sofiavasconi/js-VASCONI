@@ -143,3 +143,21 @@ if (camiseta === 1) {
 
 
 
+let boton = document.getElementById ("botonAgregar");
+boton.className="btn btn-sm btn-outline-dark";
+boton.innerHTML = "<button>Agregar al carrito</button>"
+
+
+
+let tabla = document.createElement ("table");
+let tablaBody = document.createElement ("tbody")
+for(const producto of camisetasNac) {
+    carrito.innerHTML+= `
+                        <tr>
+                        <td>Club: ${camisetasNac.club}</td>
+                        <td>Tipo: ${camisetasNac.tipo}</td>
+                        <td>Precio $${camisetasNac.precio}</td>
+                        </tr>`;
+}
+tabla.append(tablaBody);
+let lista =document.getElementById ("listaCarrito");
