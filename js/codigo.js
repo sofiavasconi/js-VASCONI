@@ -142,7 +142,6 @@ if (camiseta === 1) {
 }*/
 
 
-
 let botonBT = document.getElementById ("botonAgregar");
 botonBT.className="btn btn-sm btn-outline-dark";
 botonBT.type = "button";
@@ -157,11 +156,18 @@ botonBS.className="btn btn-sm btn-outline-dark";
 botonBS.innerHTML = "<button>Agregar al carrito</button>"
 document.getElementById("botonBS").appendChild(botonBS);
 
+let talles = document.getElementsByClassName("btn-group");
+talles [0].remove();
 
-const botonesNac = document.createElement("botones");
-botonesNac.className="btn btn-sm btn-outline-dark";
-botonesNac.innerHTML = "<button>Agregar al carrito</button>"
-document.getElementsByClassName("botones").appendChild(botonesNac);
+
+
+
+
+
+
+
+
+
 
 
 
