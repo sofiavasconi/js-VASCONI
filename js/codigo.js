@@ -72,7 +72,7 @@ const camisetasInt = [
 
 ];
 
-/*
+
 let ingreso = prompt ("inserte nac (nacional), sel (selección) o int (internacional) según el tipo de camiseta que quiera comprar.");
 
 if(ingreso != "nac" && ingreso != "sel" && ingreso != "int") {
@@ -139,25 +139,49 @@ if (camiseta === 1) {
             }
         }
     }
-}*/
+}
 
 
-let botonBT = document.getElementById ("botonAgregar");
-botonBT.className="btn btn-sm btn-outline-dark";
+let botonBT = document.getElementById ("botonBT");
 botonBT.type = "button";
-botonBT.innerHTML = "<button>Agregar al carrito</button>"
+botonBT.innerHTML = "<button>Agregar al carrito</button>";
 
-let boton = document.getElementById ("botonRT");
-boton.className="btn btn-sm btn-outline-dark";
-boton.innerHTML = "<button>Agregar al carrito</button>"
+botonBT.onmouseover=()=>{
+    botonBT.className="btn btn-sm btn-outline-dark";
+}
+
+let tallesBT = document.getElementsByClassName("tallesBT");
+tallesBT [0].remove();
 
 const botonBS = document.createElement("botonBS");
-botonBS.className="btn btn-sm btn-outline-dark";
 botonBS.innerHTML = "<button>Agregar al carrito</button>"
 document.getElementById("botonBS").appendChild(botonBS);
 
-let talles = document.getElementsByClassName("btn-group");
-talles [0].remove();
+botonBS.onmouseover=()=>{
+    botonBS.className="btn btn-sm btn-outline-dark";
+}
+
+let tallesBS = document.getElementsByClassName("tallesBS");
+tallesBS [0].remove();
+
+let boton = document.getElementById ("botonRT");
+boton.innerHTML = "<button>Agregar al carrito</button>";
+
+botonRT.onmouseover=()=>{
+    botonRT.className="btn btn-sm btn-outline-dark";
+}
+
+let tallesRT = document.getElementsByClassName("tallesRT");
+tallesRT [0].remove();
+
+
+
+
+
+
+
+
+
 
 
 
