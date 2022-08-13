@@ -142,6 +142,7 @@ if (camiseta === 1) {
 }
 
 
+
 let botonBT = document.getElementById ("botonBT");
 botonBT.type = "button";
 botonBT.innerHTML = "<button>Agregar al carrito</button>";
