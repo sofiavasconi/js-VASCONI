@@ -73,6 +73,7 @@ const camisetasInt = [
 ];
 
 
+/*
 let ingreso = prompt ("inserte nac (nacional), sel (selección) o int (internacional) según el tipo de camiseta que quiera comprar.");
 
 if(ingreso != "nac" && ingreso != "sel" && ingreso != "int") {
@@ -139,7 +140,7 @@ if (camiseta === 1) {
             }
         }
     }
-}
+}*/
 
 
 

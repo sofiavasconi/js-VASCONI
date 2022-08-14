@@ -304,6 +304,19 @@ h3 {
 }
 
 
+
+
+#cart-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+
+
+
+
 .logoFooter {
     display: flex;
     margin-left: 45%;
