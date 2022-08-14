@@ -24,15 +24,33 @@
         <div class="navbar-center">
             <img src="img/logoP.jpg" class="logo" alt="Logo">
             <div class="cart-btn">
-                <span class="nav-icon">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                      </svg>
-                </span>
                 <div class="cart-items">0</div>
             </div>
             <i class='bx bx-shopping-bag bx-border-circle' id="cart-icon" ></i>
+
+            <div class="cart">
+                <h2 class="cart-title">Tu carrito</h2>
+                <div class="cart-content">
+                    <div class="cart-box">
+                        <img src="img/bocaTitular.jpg" alt="Boca titular" class="cart-img">
+                        <div class="detail-box">
+                            <div class="cart-product-title"></div>
+                            <div class="cart-price">$15.000</div>
+                            <input type="number" value="1" class="cart-cantidad">
+                        </div>
+                        <i class='bx bx-trash-alt'></i>
+                    </div>
+                </div>
+
+                <div class="total">
+                    <div class="total-title">TOTAL:</div>
+                    <div class="total-price">$0</div>
+                </div>
+
+                <button type="button" class="btn-buy">COMPRAR</button>
+
+                <i class="bx bx-x" id="close-cart"></i>
+            </div>
         </div>
     </nav>
 
