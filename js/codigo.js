@@ -178,21 +178,6 @@ tallesRT [0].remove();
 
 
 
-let cartIcon = document.getElementById("cart-icon");
-let cart = document.getElementsByClassName("cart");
-let closeCart = document.getElementById("close-cart");
-
-
-cartIcon.onclick = () => {
-    cart.classList.add("active");
-};
-
-closeCart.onclick = () => {
-    cart.classList.remove("active")
-}
-
-
-
 
 
 
