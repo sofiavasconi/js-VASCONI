@@ -1,31 +1,32 @@
+// declaración de objetos 
 const camisetasNac = [
-    {categoriaBT: "nacional", clubBT: "boca", tipoBT: "titular", precioBT: 15000},
+    {id: 0, titulo: "CAMISETA SUPLENTE BOCA JUNIORS", precio: 15000, imagen: "../img/bocaTitular.jpg"},
 
-    {categoria: "nacional", club: "boca", tipo: "suplente", precio: 10000},
+    {id: 1, club: "boca", tipo: "suplente", precio: 10000},
 
-    {categoria: "nacional", club: "river", tipo: "titular", precio: 15000},
+    {id: 2, club: "river", tipo: "titular", precio: 15000},
 
-    {categoria: "nacional", club: "river", tipo: "suplente", precio: 10000},
+    {id: 3, club: "river", tipo: "suplente", precio: 10000},
 
-    {categoria: "nacional", club: "racing", tipo: "titular", precio: 15000},
+    {id: 4, club: "racing", tipo: "titular", precio: 15000},
 
-    {categoria: "nacional", club: "racing", tipo: "suplente", precio: 10000},
+    {id: 5, club: "racing", tipo: "suplente", precio: 10000},
 
-    {categoria: "nacional", club: "independiente", tipo: "titular", precio: 15000},
+    {id: 6, club: "independiente", tipo: "titular", precio: 15000},
 
-    {categoria: "nacional", club: "independiente", tipo: "suplente", precio: 10000},
+    {id: 7, club: "independiente", tipo: "suplente", precio: 10000},
 
-    {categoria: "nacional", club: "san lorenzo", tipo: "titular", precio: 15000},
+    {id: 8, club: "san lorenzo", tipo: "titular", precio: 15000},
 
-    {categoria: "nacional", club: "san lorenzo", tipo: "suplente", precio: 10000},
+    {id: 9, club: "san lorenzo", tipo: "suplente", precio: 10000},
 
-    {categoria: "nacional", club: "velez", tipo: "titular", precio: 15000},
+    {id: 10, club: "velez", tipo: "titular", precio: 15000},
 
-    {categoria: "nacional", club: "velez", tipo: "suplente", precio: 10000},
+    {id: 11, club: "velez", tipo: "suplente", precio: 10000},
 
-    {categoria: "nacional", club: "huracan", tipo: "titular", precio: 15000},
+    {id: 12, club: "huracan", tipo: "titular", precio: 15000},
 
-    {categoria: "nacional", club: "huracan", tipo: "suplente", precio: 10000},
+    {id: 13, club: "huracan", tipo: "suplente", precio: 10000},
 ]
 
 const camisetasSel = [
@@ -176,6 +177,34 @@ botonRT.onmouseover=()=>{
 let tallesRT = document.getElementsByClassName("tallesRT");
 tallesRT [0].remove();
 
+
+
+//seleccion de elementos
+
+const productosEl = document.getElementById("carritoH");
+
+
+//crear productos
+
+function crearProductos () {
+    camisetasNac.forEach((producto)=>{
+        productosEl.innerHTML += `
+        <button onclick="agregarAlCarrito(${producto.id})>Agregar al carrito</button>
+        `
+    } )
+}
+crearProductos();
+
+
+//array carrito
+let carrito = [];
+
+//agregar al carrito
+
+function agregarAlCarrito (id){
+    const item = camisetasNac.find((producto)=> producto.id === id)
+    console.log(item);
+};
 
 
 
