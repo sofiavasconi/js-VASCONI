@@ -450,12 +450,23 @@ h3 {
 #trash {
     color: #ffffff;
     margin-top: 85px;
+    cursor: pointer;
+}
+
+hr {
+    color: #ffffff;
 }
 
 
 
-
 .listaProductos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 5%;;
+}
+
+.listaProductosSEL {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

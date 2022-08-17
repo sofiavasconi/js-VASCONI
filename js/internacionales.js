@@ -1,85 +1,32 @@
-// declaración de objetos 
-
-const camisetasNac = [
-    {id: 0, titulo: "CAMISETA TITULAR BOCA JUNIORS", precio: 15000, imagen: "../img/bocaTitular.jpg"},
-
-    {id: 1, titulo: "CAMISETA SUPLENTE BOCA JUNIORS", precio: 10000, imagen: "../img/bocaSuplente.jpg"},
-
-    {id: 2, titulo: "CAMISETA TITULAR RIVER PLATE", precio: 15000, imagen: "../img/riverT.jpg"},
-
-    {id: 3, titulo: "CAMISETA SUPLENTE RIVER PLATE", precio: 10000, imagen: "../img/riverS.jpg"},
-
-    {id: 4, titulo: "CAMISETA TITULAR RACING CLUB", precio: 15000, imagen: "../img/racingT.jpg"},
-
-    {id: 5, titulo: "CAMISETA SUPLENTE RACING CLUB", precio: 10000, imagen: "../img/racingS.jpg"},
-
-    {id: 6, titulo: "CAMISETA TITULAR INDEPENDIENTE", precio: 15000, imagen: "../img/indT.jpg"},
-
-    {id: 7, titulo: "CAMISETA SUPLENTE INDEPENDIENTE", precio: 10000, imagen: "../img/indS.jpg"},
-
-    {id: 8, titulo: "CAMISETA TITULAR SAN LORENZO", precio: 15000, imagen: "../img/snT.jpg"},
-
-    {id: 9, titulo: "CAMISETA SUPLENTE SAN LORENZO", precio: 10000, imagen: "../img/slS.jpg"},
-
-    {id: 10, titulo: "CAMISETA TITULAR VELEZ SARSFIELD", precio: 15000, imagen: "../img/velezT.jpg"},
-
-    {id: 11, titulo: "CAMISETA SUPLENTE VELEZ SARSFIELD", precio: 10000, imagen: "../img/velezS.jpg"},
-
-    {id: 12, titulo: "CAMISETA TITULAR HURACÁN", precio: 15000, imagen: "../img/huracanT.jpg"},
-
-    {id: 13, titulo: "CAMISETA SUPLENTE HURACÁN", precio: 10000, imagen: "../img/huracanS.jpg"},
-];
-
-const camisetasSel = [
-    {id: 14, titulo: "CAMISETA ARGENTINA", precio: 15000, imagen: "../img/argentinaC.jpg"},
-
-    {id: 15, titulo: "CAMISETA BRASIL", precio: 15000, imagen: "../img/brasil.jpg"},
-
-    {id: 16, titulo: "CAMISETA URUGUAY", precio: 15000, imagen: "../img/uruguay.jpEg"},
-
-    {id: 17, titulo: "CAMISETA ITALIA", precio: 15000, imagen: "../img/italia.jpg"},
-
-    {id: 18, titulo: "CAMISETA FRANCIA", precio: 15000, imagen: "../img/francia.jfif"},
-
-    {id: 19, titulo: "CAMISETA ALEMANIA", precio: 15000, imagen: "../img/alemania.jpg"},
-
-    {id: 20, titulo: "CAMISETA INGLATERRA", precio: 15000, imagen: "../img/inglaterra.jfif"},
-
-    {id: 21, titulo: "CAMISETA ESPAÑA", precio: 15000, imagen: "../img/españa.jpg"},
-];
-
 const camisetasInt = [
 
-    {id: 22, titulo: "CAMISETA TITULAR PSG", precio: 15000, imagen: "../img/psg.jpg"},
+    {id: 0, titulo: "CAMISETA TITULAR PSG", precio: 15000, imagen: "../img/psg.jpg"},
 
-    {id: 23, titulo: "CAMISETA TITULAR BARCELONA", precio: 15000, imagen: "../img/barca.jpg"},
+    {id: 1, titulo: "CAMISETA TITULAR BARCELONA", precio: 15000, imagen: "../img/barca.jpg"},
 
-    {id: 24, titulo: "CAMISETA TITULAR REAL MADRID", precio: 15000, imagen: "../img/rm.jfif"},
+    {id: 2, titulo: "CAMISETA TITULAR REAL MADRID", precio: 15000, imagen: "../img/rm.jfif"},
 
-    {id: 25, titulo: "CAMISETA TITULAR JUVENTUS", precio: 15000, imagen: "../img/juve.jpg"},
+    {id: 3, titulo: "CAMISETA TITULAR JUVENTUS", precio: 15000, imagen: "../img/juve.jpg"},
 
-    {id: 26, titulo: "CAMISETA TITULAR INTER", precio: 15000, imagen: "../img/inter.jpg"},
+    {id: 4, titulo: "CAMISETA TITULAR INTER", precio: 15000, imagen: "../img/inter.jpg"},
 
-    {id: 27, titulo: "CAMISETA TITULAR MANCHESTER CITY", precio: 15000, imagen: "../img/city.jpg"},
+    {id: 5, titulo: "CAMISETA TITULAR MANCHESTER CITY", precio: 15000, imagen: "../img/city.jpg"},
 
-    {id: 28, titulo: "CAMISETA TITULAR MANCHESTER UNITED", precio: 15000, imagen: "../img/united.jpg"},
+    {id: 6, titulo: "CAMISETA TITULAR MANCHESTER UNITED", precio: 15000, imagen: "../img/united.jpg"},
 
-    {id: 29, titulo: "CAMISETA TITULAR LIVERPOOL", precio: 15000, imagen: "../img/liverpool.jpg"},
+    {id: 7, titulo: "CAMISETA TITULAR LIVERPOOL", precio: 15000, imagen: "../img/liverpool.jpg"},
 
-    {id: 30, titulo: "CAMISETA TITULAR BAYERN MUNICH", precio: 15000, imagen: "../img/bayern.jpg"},
+    {id: 8, titulo: "CAMISETA TITULAR BAYERN MUNICH", precio: 15000, imagen: "../img/bayern.jpg"},
 
-    {id: 31, titulo: "CAMISETA TITULAR FLAMENGO", precio: 15000, imagen: "../img/flamengo.jpg"},
+    {id: 9, titulo: "CAMISETA TITULAR FLAMENGO", precio: 15000, imagen: "../img/flamengo.jpg"},
 
-    {id: 32, titulo: "CAMISETA TITULAR PALMEIRAS", precio: 15000, imagen: "../img/palmeiras.jpg"},
+    {id: 10, titulo: "CAMISETA TITULAR PALMEIRAS", precio: 15000, imagen: "../img/palmeiras.jpg"},
 
 ];
-
 
 
 //seleccion de elementos
 
-
-//NACIONALES
 const productosElementos = document.querySelector(".listaProductos");
 
 const productosCarrito = document.querySelector(".cart-box");
@@ -89,12 +36,10 @@ const precioTotal = document.querySelector("#total");
 const notificacionCantidad = document.querySelector("#cart-items");
 
 
-
 //crear productos
 
-//NACIONALES
 function crearProductos () {
-    camisetasNac.forEach( (camiseta) => {
+    camisetasInt.forEach( (camiseta) => {
         productosElementos.innerHTML += `
             <section class="item">
                 <div class="imgItem">
@@ -124,7 +69,7 @@ function agregarAlCarrito (id){
     if(carrito.some((item) => item.id === id)) {
         cambiarNumeroDeUnidades("mas", id)
     }else{
-         const item = camisetasNac.find((camiseta) => camiseta.id === id);
+         const item = camisetasInt.find((camiseta) => camiseta.id === id);
 
         carrito.push ({
             ...item, 
@@ -221,6 +166,7 @@ function borrarDelCarrito (id) {
 
     actualizarCarrito ();
 }
+
 
 
 

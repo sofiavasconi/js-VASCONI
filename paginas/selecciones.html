@@ -20,183 +20,44 @@
 </head>
 <body>
     <nav class="navbar fixed-top">
-        <div class="navbar-center">
-            <a href="../index.html"><img src="../img/logoP.jpg" class="logo" alt="Logo"></a>
-            <div class="cart-btn">
-            <i class='bx bx-shopping-bag bx-border-circle' id="cart-icon"></i>
-                <div class="cart-items">0</div>
-            </div>
-            <div class="cart">
-                <h2 class="cart-title">Tu carrito</h2>
-                <div class="cart-content">
-                    <div class="cart-box">
-                        <img src="../img/bocaTitular.jpg" alt="Boca titular" class="cart-img">
-                        <div class="detail-box">
-                            <div class="cart-product-title">Camiseta titular BOCA JUNIORS</div>
-                            <div class="cart-price">$15.000</div>
-                            <input type="number" value="1" class="cart-cantidad">
+        <nav class="navbar fixed-top">
+            <div class="navbar-center">
+                <a href="../index.html"><img src="../img/logoP.jpg" class="logo" alt="Logo"></a>
+                <div class="cart-btn">
+                <i class='bx bx-shopping-bag bx-border-circle' id="cart-icon"></i>
+                    <div class="cart-items">0</div>
+                </div>
+                <div class="cart">
+                    <h2 class="cart-title">Tu carrito</h2>
+                    <div class="cart-content">
+                        <div class="cart-box">
+                            
                         </div>
-                        <i class='trash bx bx-trash-alt'></i>
                     </div>
+                    <hr>
+                    <div id="total">
+                        
+                    </div>
+    
+                    <button type="button" class="btn-buy">COMPRAR</button>
+    
+                    <i class="bx bx-x" id="close-cart"></i>
                 </div>
-
-                <div class="total">
-                    <div class="total-title">TOTAL:</div>
-                    <div class="total-price">$0</div>
-                </div>
-
-                <button type="button" class="btn-buy">COMPRAR</button>
-
-                <i class="bx bx-x" id="close-cart"></i>
             </div>
-        </div>
-    </nav>
+        </nav>
 
     <header>
         <h3>Camisetas de selecciones</h3>
     </header>
 
     <main>
-        <div class="album bg-light">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../img/argentinaC.jpg" data-holder-rendered="true">
-                        <div class="card-body">
-                            <p class="card-text">
-                                Camiseta selección ARGENTINA
-                            </p>
-                            <p class="precio card-text">
-                                $15.000
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn btn-sm btn-outline-dark" >Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../img/brasil.jpg" data-holder-rendered="true">
-                        <div class="card-body">
-                            <p class="card-text">
-                                Camiseta selección BRASIL
-                            </p>
-                            <p class="precio card-text">
-                                $15.000
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="container">
+            <div class="listaProductos">
 
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../img/uruguay.jpeg" data-holder-rendered="true">
-                        <div class="card-body">
-                            <p class="card-text">
-                                Camiseta selección URUGUAY
-                            </p>
-                            <p class="precio card-text">
-                                $15.000
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../img/italia.jpg" data-holder-rendered="true">
-                        <div class="card-body">
-                            <p class="card-text">
-                                Camiseta selección ITALIA
-                            </p>
-                            <p class="precio card-text">
-                                $15.000
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../img/francia.jfif" data-holder-rendered="true">
-                        <div class="card-body">
-                            <p class="card-text">
-                                Camiseta selección FRANCIA
-                            </p>
-                            <p class="precio card-text">
-                                $15.000
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../img/alemania.jpg" data-holder-rendered="true">
-                        <div class="card-body">
-                            <p class="card-text">
-                                Camiseta selección ALEMANIA
-                            </p>
-                            <p class="precio card-text">
-                                $15.000
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../img/inglaterra.jfif" data-holder-rendered="true">
-                        <div class="card-body">
-                            <p class="card-text">
-                                Camiseta selección INGLATERRA
-                            </p>
-                            <p class="precio card-text">
-                                $15.000
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../img/españa.jpg" data-holder-rendered="true">
-                        <div class="card-body">
-                            <p class="card-text">
-                                Camiseta selección ESPAÑA
-                            </p>
-                            <p class="precio card-text">
-                                $15.000
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn btn-sm btn-outline-dark">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
         </div>
+
 
         <a href="../index.html" class="volver">VOLVER</a>
 
@@ -206,7 +67,7 @@
         <img class="logoFooter" src="../img/logoP.jpg">
     </footer>
 
-    <script src="../js/codigo.js"></script>
+    <script src="../js/selecciones.js"></script>
 
 </body>
 </html>
