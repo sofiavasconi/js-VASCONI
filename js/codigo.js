@@ -187,6 +187,8 @@ const productosElementos = document.querySelector(".listaProductos");
 
 const productosCarrito = document.querySelector(".cart-box");
 
+const precioTotal = document.querySelector(".total-price");
+
 
 //crear productos
 
@@ -218,44 +220,108 @@ let carrito = [];
 //agregar al carrito
 function agregarAlCarrito (id){
     //productos ya existen en carrito
+    if(carrito.some((item) => item.id === id)) {
+        cambiarNumeroDeUnidades("mas", id)
+    }else{
+         const item = camisetasNac.find((camiseta) => camiseta.id === id);
 
-    if(carrito.some((item) => item.id === id)){
-        alert ("Producto ya está en carrito")
-    }else{    
-        const item = camisetasNac.find((camiseta => camiseta.id === id))
+        carrito.push ({
+            ...item, 
+            numeroDeUnidades : 1
+        });
     }
-        
-        actualizarCarrito ();
-    };
 
+    actualizarCarrito ();
+};
 
 
 //actualizar el carrito
-function actualizarCarrito (){
+function actualizarCarrito(){
     agregarItemsAlCarrito ();
-    //total ();
-};
+    total ();
+}
 
 
 //agregar items al carrito
 function agregarItemsAlCarrito () {
+
+        productosCarrito.innerHTML = ""; //para limpiar el carrito
+
     carrito.forEach ((item) => {
+        
         productosCarrito.innerHTML += `
-            <div>
-                <img src="${item.imagen}" alt="${item.titulo}" class="cart-img">
+            <img src="${item.imagen}" alt="${item.titulo}" class="cart-img">
                 
-                <div class="detail-box">
-                    <div class="cart-product-title">
-                    ${item.titulo}
-                    </div>
-                    <div class="cart-price">
-                    $ ${item.precio}
-                    </div>
-                    <input type="number" value="1" class="cart-cantidad">
+            <div class="detail-box">
+                <div class="cart-product-title">
+                ${item.titulo}
                 </div>
-                
-                 <i class='trash bx bx-trash-alt'></i>
+                <div class="cart-price">
+                $ ${item.precio}
+                </div>
+                <div class="botonesCantidad">
+                    <div class="btn minus" onclick="cambiarNumeroDeUnidades('menos', ${item.id})">-</div>
+                    <div class="number">${item.numeroDeUnidades}</div>
+                    <div class="btn plus" onclick="cambiarNumeroDeUnidades('mas', ${item.id})">+</div>
+                </div>
             </div>
+                
+            <i class='bx bx-trash-alt' id="trash"></i>
+        
         `
     });
+}
+
+// numero de unidades
+function cambiarNumeroDeUnidades(action, id){
+    carrito = carrito.map((item) => {
+
+        let numeroDeUnidades = item.numeroDeUnidades;
+
+        if(item.id === id){
+            if(action === "menos" && numeroDeUnidades > 1){
+                numeroDeUnidades--;
+            } else if (action === "mas") {
+                numeroDeUnidades++;
+            }
+        }
+        return {
+            ...item,
+            numeroDeUnidades,
+        }
+    })
+
+    actualizarCarrito ();
+}
+
+
+//borrar elementos del carrito
+function borrarElementosDelCarrito (){
+    var borrarConBoton = document.getElementById("trash")
+    console.log("borrarConBoton")
+
+    for (var i=0; i<borrarConBoton.length; i++){
+        var boton = borrarConBoton[i]
+        boton.addEventListener("click", borrarItemDelCarrito)
+    }
+}
+
+function borrarItemDelCarrito(evento){
+    var apretarBoton = evento.target
+    apretarBoton.parentElement.remove()
+}
+
+
+//total
+function actualizarElTotal (){
+    let total = 0;
+
+    carrito.forEach ((item) => {
+        total += item.precio * item.numeroDeUnidades;
+    });
+
+    precioTotal.innerHTML = `
+        TOTAL: $${total}
+    `;
+
 }
