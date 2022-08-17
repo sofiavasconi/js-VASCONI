@@ -1,75 +1,76 @@
 // declaración de objetos 
+
 const camisetasNac = [
-    {id: 0, titulo: "CAMISETA SUPLENTE BOCA JUNIORS", precio: 15000, imagen: "../img/bocaTitular.jpg"},
+    {id: 0, titulo: "CAMISETA TITULAR BOCA JUNIORS", precio: 15000, imagen: "../img/bocaTitular.jpg"},
 
-    {id: 1, club: "boca", tipo: "suplente", precio: 10000},
+    {id: 1, titulo: "CAMISETA SUPLENTE BOCA JUNIORS", precio: 10000, imagen: "../img/bocaSuplente.jpg"},
 
-    {id: 2, club: "river", tipo: "titular", precio: 15000},
+    {id: 2, titulo: "CAMISETA TITULAR RIVER PLATE", precio: 15000, imagen: "../img/riverT.jpg"},
 
-    {id: 3, club: "river", tipo: "suplente", precio: 10000},
+    {id: 3, titulo: "CAMISETA SUPLENTE RIVER PLATE", precio: 10000, imagen: "../img/riverS.jpg"},
 
-    {id: 4, club: "racing", tipo: "titular", precio: 15000},
+    {id: 4, titulo: "CAMISETA TITULAR RACING CLUB", precio: 15000, imagen: "../img/racingT.jpg"},
 
-    {id: 5, club: "racing", tipo: "suplente", precio: 10000},
+    {id: 5, titulo: "CAMISETA SUPLENTE RACING CLUB", precio: 10000, imagen: "../img/racingS.jpg"},
 
-    {id: 6, club: "independiente", tipo: "titular", precio: 15000},
+    {id: 6, titulo: "CAMISETA TITULAR INDEPENDIENTE", precio: 15000, imagen: "../img/indT.jpg"},
 
-    {id: 7, club: "independiente", tipo: "suplente", precio: 10000},
+    {id: 7, titulo: "CAMISETA SUPLENTE INDEPENDIENTE", precio: 10000, imagen: "../img/indS.jpg"},
 
-    {id: 8, club: "san lorenzo", tipo: "titular", precio: 15000},
+    {id: 8, titulo: "CAMISETA TITULAR SAN LORENZO", precio: 15000, imagen: "../img/snT.jpg"},
 
-    {id: 9, club: "san lorenzo", tipo: "suplente", precio: 10000},
+    {id: 9, titulo: "CAMISETA SUPLENTE SAN LORENZO", precio: 10000, imagen: "../img/slS.jpg"},
 
-    {id: 10, club: "velez", tipo: "titular", precio: 15000},
+    {id: 10, titulo: "CAMISETA TITULAR VELEZ SARSFIELD", precio: 15000, imagen: "../img/velezT.jpg"},
 
-    {id: 11, club: "velez", tipo: "suplente", precio: 10000},
+    {id: 11, titulo: "CAMISETA SUPLENTE VELEZ SARSFIELD", precio: 10000, imagen: "../img/velezS.jpg"},
 
-    {id: 12, club: "huracan", tipo: "titular", precio: 15000},
+    {id: 12, titulo: "CAMISETA TITULAR HURACÁN", precio: 15000, imagen: "../img/huracanT.jpg"},
 
-    {id: 13, club: "huracan", tipo: "suplente", precio: 10000},
-]
+    {id: 13, titulo: "CAMISETA SUPLENTE HURACÁN", precio: 10000, imagen: "../img/huracanS.jpg"},
+];
 
 const camisetasSel = [
-    {seleccion: "seleccion", pais: "argentina", precio: 15000},
+    {id: 0, tipo: "CAMISETA ARGENTINA", precio: 15000, imagen: "../img/argentinaC.jpg"},
 
-    {seleccion: "seleccion", pais: "brasil", precio: 15000},
+    {id: 1, tipo: "CAMISETA BRASIL", precio: 15000, imagen: "../img/brasil.jpg"},
 
-    {seleccion: "seleccion", pais: "uruguay", precio: 15000},
+    {id: 2, tipo: "CAMISETA URUGUAY", precio: 15000, imagen: "../img/uruguay.jpg"},
 
-    {seleccion: "seleccion", pais: "italia", precio: 15000},
+    {id: 3, tipo: "CAMISETA ITALIA", precio: 15000, imagen: "../img/italia.jpg"},
 
-    {seleccion: "seleccion", pais: "francia", precio: 15000},
+    {id: 4, tipo: "CAMISETA FRANCIA", precio: 15000, imagen: "../img/francia.jfif"},
 
-    {seleccion: "seleccion", pais: "alemania", precio: 15000},
+    {id: 5, tipo: "CAMISETA ALEMANIA", precio: 15000, imagen: "../img/alemania.jpg"},
 
-    {seleccion: "seleccion", pais: "inglaterra", precio: 15000},
+    {id: 6, tipo: "CAMISETA INGLATERRA", precio: 15000, imagen: "../img/inglaterra.jfif"},
 
-    {seleccion: "seleccion", pais: "españa", precio: 15000},
-]
+    {id: 7, tipo: "CAMISETA ESPAÑA", precio: 15000, imagen: "../img/españa.jpg"},
+];
 
 const camisetasInt = [
 
-    {categoria: "internacional", club: "psg", precio: 15000},
+    {id: 0, tipo: "CAMISETA TITULAR PSG", precio: 15000, imagen: "../img/psg.jpg"},
 
-    {categoria: "internacional", club: "barcelona", precio: 15000},
+    {id: 1, tipo: "CAMISETA TITULAR BARCELONA", precio: 15000, imagen: "../img/barca.jpg"},
 
-    {categoria: "internacional", club: "real madrid", precio: 15000},
+    {id: 2, tipo: "CAMISETA TITULAR REAL MADRID", precio: 15000, imagen: "../img/rm.jfif"},
 
-    {categoria: "internacional", club: "juventus", precio: 15000},
+    {id: 3, tipo: "CAMISETA TITULAR JUVENTUS", precio: 15000, imagen: "../img/juve.jpg"},
 
-    {categoria: "internacional", club: "inter", precio: 15000},
+    {id: 4, tipo: "CAMISETA TITULAR INTER", precio: 15000, imagen: "../img/inter.jpg"},
 
-    {categoria: "internacional", club: "manchester city", precio: 15000},
+    {id: 5, tipo: "CAMISETA TITULAR MANCHESTER CITY", precio: 15000, imagen: "../img/city.jpg"},
 
-    {categoria: "internacional", club: "manchester united", precio: 15000},
+    {id: 6, tipo: "CAMISETA TITULAR MANCHESTER UNITED", precio: 15000, imagen: "../img/united.jpg"},
 
-    {categoria: "internacional", club: "liverpool", precio: 15000},
+    {id: 7, tipo: "CAMISETA TITULAR LIVERPOOL", precio: 15000, imagen: "../img/liverpool.jpg"},
 
-    {categoria: "internacional", club: "bayern munich", precio: 15000},
+    {id: 8, tipo: "CAMISETA TITULAR BAYERN MUNICH", precio: 15000, imagen: "../img/bayern.jpg"},
 
-    {categoria: "internacional", club: "flamengo", precio: 15000},
+    {id: 9, tipo: "CAMISETA TITULAR FLAMENGO", precio: 15000, imagen: "../img/flamengo.jpg"},
 
-    {categoria: "internacional", club: "palmeiras", precio: 15000},
+    {id: 10, tipo: "CAMISETA TITULAR PALMEIRAS", precio: 15000, imagen: "../img/palmeiras.jpg"},
 
 ];
 
@@ -141,7 +142,7 @@ if (camiseta === 1) {
             }
         }
     }
-}*/
+}
 
 
 
@@ -176,22 +177,36 @@ botonRT.onmouseover=()=>{
 
 let tallesRT = document.getElementsByClassName("tallesRT");
 tallesRT [0].remove();
+*/
 
 
 
 //seleccion de elementos
 
-const productosEl = document.getElementById("carritoH");
+const productosElementos = document.querySelector(".listaProductos");
+
+const productosCarrito = document.querySelector(".cart-box");
 
 
 //crear productos
 
 function crearProductos () {
-    camisetasNac.forEach((producto)=>{
-        productosEl.innerHTML += `
-        <button onclick="agregarAlCarrito(${producto.id})>Agregar al carrito</button>
-        `
-    } )
+    camisetasNac.forEach( (camiseta) => {
+        productosElementos.innerHTML += `
+            <section class="item">
+                <div class="imgItem">
+                    <img src="${camiseta.imagen}" alt="${camiseta.titulo}" class="imagen">
+                </div>
+                <div class="titulo">
+                    <h3 class="h3Titulo"><strong >${camiseta.titulo}</strong></h3>
+                    <h3 class="h3Precio"><small>$ ${camiseta.precio}</small></h3>
+                </div>
+                <div class="agregarAlCarrito" onclick="agregarAlCarrito(${camiseta.id})">
+                    <i class='bx bx-cart-add' id="itemCarrito"></i>
+                </div>
+            </section>
+        `;
+    } );
 }
 crearProductos();
 
@@ -199,29 +214,48 @@ crearProductos();
 //array carrito
 let carrito = [];
 
-//agregar al carrito
 
+//agregar al carrito
 function agregarAlCarrito (id){
-    const item = camisetasNac.find((producto)=> producto.id === id)
-    console.log(item);
+    //productos ya existen en carrito
+
+    if(carrito.some((item) => item.id === id)){
+        alert ("Producto ya está en carrito")
+    }else{    
+        const item = camisetasNac.find((camiseta => camiseta.id === id))
+    }
+        
+        actualizarCarrito ();
+    };
+
+
+
+//actualizar el carrito
+function actualizarCarrito (){
+    agregarItemsAlCarrito ();
+    //total ();
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//agregar items al carrito
+function agregarItemsAlCarrito () {
+    carrito.forEach ((item) => {
+        productosCarrito.innerHTML += `
+            <div>
+                <img src="${item.imagen}" alt="${item.titulo}" class="cart-img">
+                
+                <div class="detail-box">
+                    <div class="cart-product-title">
+                    ${item.titulo}
+                    </div>
+                    <div class="cart-price">
+                    $ ${item.precio}
+                    </div>
+                    <input type="number" value="1" class="cart-cantidad">
+                </div>
+                
+                 <i class='trash bx bx-trash-alt'></i>
+            </div>
+        `
+    });
+}

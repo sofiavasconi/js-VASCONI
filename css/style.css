@@ -437,6 +437,55 @@ h3 {
 
 
 
+.listaProductos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 5%;;
+}
+
+.item{
+    width: 30%;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+.imagen {
+    width: 65%;
+    margin-left: 5%;
+    justify-content: center;
+}
+
+
+.h3Titulo{
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-right: 20%;
+}
+
+.h3Precio{
+    font-size: 15px;
+    text-align: start;
+    font-family: 'Raleway', sans-serif;
+    width: 50%;
+    margin-top: 8%;
+    margin-left: 3%;
+}
+
+.agregarAlCarrito{
+    width: 20%;
+    margin-left: 60%;
+    margin-top: -35px;
+}
+
+#itemCarrito{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
 
 
 
