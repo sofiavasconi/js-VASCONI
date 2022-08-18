@@ -319,14 +319,16 @@ h3 {
 .cart{
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     width: 300px;
     min-height: 100vh;
     padding: 20px;
     background: #000000;
 }
 
-
+.cart.active{
+    right: 0;
+}
 
 .cart-title{
     text-align: center;

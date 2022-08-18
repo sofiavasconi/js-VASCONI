@@ -31,46 +31,46 @@ const camisetasNac = [
 ];
 
 const camisetasSel = [
-    {idSEL: 14, tituloSEL: "CAMISETA ARGENTINA", precioSEL: 15000, imagenSEL: "../img/argentinaC.jpg"},
+    {id: 14, titulo: "CAMISETA ARGENTINA", precio: 15000, imagen: "../img/argentinaC.jpg"},
 
-    {idSEL: 15, tituloSEL: "CAMISETA BRASIL", precioSEL: 15000, imagenSEL: "../img/brasil.jpg"},
+    {id: 15, titulo: "CAMISETA BRASIL", precio: 15000, imagen: "../img/brasil.jpg"},
 
-    {idSEL: 16, tituloSEL: "CAMISETA URUGUAY", precioSEL: 15000, imagenSEL: "../img/uruguay.jpEg"},
+    {id: 16, titulo: "CAMISETA URUGUAY", precio: 15000, imagen: "../img/uruguay.jpeg"},
 
-    {idSEL: 17, tituloSEL: "CAMISETA ITALIA", precioSEL: 15000, imagenSEL: "../img/italia.jpg"},
+    {id: 17, titulo: "CAMISETA ITALIA", precio: 15000, imagen: "../img/italia.jpg"},
 
-    {idSEL: 18, tituloSEL: "CAMISETA FRANCIA", precioSEL: 15000, imagenSEL: "../img/francia.jfif"},
+    {id: 18, titulo: "CAMISETA FRANCIA", precio: 15000, imagen: "../img/francia.jfif"},
 
-    {idSEL: 19, tituloSEL: "CAMISETA ALEMANIA", precioSEL: 15000, imagenSEL: "../img/alemania.jpg"},
+    {id: 19, titulo: "CAMISETA ALEMANIA", precio: 15000, imagen: "../img/alemania.jpg"},
 
-    {idSEL: 20, tituloSEL: "CAMISETA INGLATERRA", precioSEL: 15000, imagenSEL: "../img/inglaterra.jfif"},
+    {id: 20, titulo: "CAMISETA INGLATERRA", precio: 15000, imagen: "../img/inglaterra.jfif"},
 
-    {idSEL: 21, tituloSEL: "CAMISETA ESPAÑA", precioSEL: 15000, imagenSEL: "../img/españa.jpg"},
+    {id: 21, titulo: "CAMISETA ESPAÑA", precio: 15000, imagen: "../img/españa.jpg"},
 ];
 
 const camisetasInt = [
 
-    {idINT: 22, tituloINT: "CAMISETA TITULAR PSG", precioINT: 15000, imagenINT: "../img/psg.jpg"},
+    {id: 22, titulo: "CAMISETA TITULAR PSG", precio: 15000, imagen: "../img/psg.jpg"},
 
-    {idINT: 23, tituloINT: "CAMISETA TITULAR BARCELONA", precioINT: 15000, imagenINT: "../img/barca.jpg"},
+    {id: 23, titulo: "CAMISETA TITULAR BARCELONA", precio: 15000, imagen: "../img/barca.jpg"},
 
-    {idINT: 24, tituloINT: "CAMISETA TITULAR REAL MADRID", precioINT: 15000, imagenINT: "../img/rm.jfif"},
+    {id: 24, titulo: "CAMISETA TITULAR REAL MADRID", precio: 15000, imagen: "../img/rm.jfif"},
 
-    {idINT: 25, tituloINT: "CAMISETA TITULAR JUVENTUS", precioINT: 15000, imagenINT: "../img/juve.jpg"},
+    {id: 25, titulo: "CAMISETA TITULAR JUVENTUS", precio: 15000, imagen: "../img/juve.jpg"},
 
-    {idINT: 26, tituloINT: "CAMISETA TITULAR INTER", precioINT: 15000, imagenINT: "../img/inter.jpg"},
+    {id: 26, titulo: "CAMISETA TITULAR INTER", precio: 15000, imagen: "../img/inter.jpg"},
 
-    {idINT: 27, tituloINT: "CAMISETA TITULAR MANCHESTER CITY", precioINT: 15000, imagenINT: "../img/city.jpg"},
+    {id: 27, titulo: "CAMISETA TITULAR MANCHESTER CITY", precio: 15000, imagen: "../img/city.jpg"},
 
-    {idINT: 28, tituloINT: "CAMISETA TITULAR MANCHESTER UNITED", precioINT: 15000, imagenINT: "../img/united.jpg"},
+    {id: 28, titulo: "CAMISETA TITULAR MANCHESTER UNITED", precio: 15000, imagen: "../img/united.jpg"},
 
-    {idINT: 29, tituloINT: "CAMISETA TITULAR LIVERPOOL", precioINT: 15000, imagenINT: "../img/liverpool.jpg"},
+    {id: 29, titulo: "CAMISETA TITULAR LIVERPOOL", precio: 15000, imagen: "../img/liverpool.jpg"},
 
-    {idINT: 30, tituloINT: "CAMISETA TITULAR BAYERN MUNICH", precioINT: 15000, imagenINT: "../img/bayern.jpg"},
+    {id: 30, titulo: "CAMISETA TITULAR BAYERN MUNICH", precio: 15000, imagen: "../img/bayern.jpg"},
 
-    {idINT: 31, tituloINT: "CAMISETA TITULAR FLAMENGO", precioINT: 15000, imagenINT: "../img/flamengo.jpg"},
+    {id: 31, titulo: "CAMISETA TITULAR FLAMENGO", precio: 15000, imagen: "../img/flamengo.jpg"},
 
-    {idINT: 32, tituloINT: "CAMISETA TITULAR PALMEIRAS", precioINT: 15000, imagenINT: "../img/palmeiras.jpg"},
+    {id: 32, titulo: "CAMISETA TITULAR PALMEIRAS", precio: 15000, imagen: "../img/palmeiras.jpg"},
 
 ];
 
@@ -88,7 +88,7 @@ const productosCarrito = document.querySelector(".cart-box");
 
 const precioTotal = document.querySelector("#total");
 
-const notificacionCantidad = document.querySelector("#cart-items");
+const notificacionCantidad = document.querySelector(".cart-items");
 
 
 
@@ -107,7 +107,7 @@ function crearProductos () {
                     <h3 class="h3Precio"><small>$ ${camiseta.precio}</small></h3>
                 </div>
                 <div class="agregarAlCarrito" onclick="agregarAlCarrito(${camiseta.id})">
-                    <i class='bx bx-cart-add' id="itemCarrito"></i>
+                    <i class='bx bx-cart-add' id="itemCarrito")></i>
                 </div>
             </section>
         `;
@@ -127,10 +127,16 @@ function agregarAlCarrito (id){
         cambiarNumeroDeUnidades("mas", id)
     }else{
          const item = camisetasNac.find((camiseta) => camiseta.id === id);
-
+         const itemSEL = camisetasSel.find((camisetaSEL) => camisetaSEL.id === id);
+         const itemINT = camisetasInt.find((camisetaINT) => camisetaINT.id === id)
         carrito.push ({
             ...item, 
+            numeroDeUnidades : 1,
+            ...itemSEL, 
+            numeroDeUnidades : 1,
+            ...itemINT,
             numeroDeUnidades : 1
+            
         });
     }
 
@@ -234,13 +240,13 @@ function crearProductosSEL () {
         productosElementosSEL.innerHTML += `
             <section class="item">
                 <div class="imgItem">
-                    <img src="${camisetaSEL.imagenSEL}" alt="${camisetaSEL.tituloSEL}" class="imagen">
+                    <img src="${camisetaSEL.imagen}" alt="${camisetaSEL.titulo}" class="imagen">
                 </div>
                 <div class="titulo">
-                    <h3 class="h3Titulo"><strong >${camisetaSEL.tituloSEL}</strong></h3>
-                    <h3 class="h3Precio"><small>$ ${camisetaSEL.precioSEL}</small></h3>
+                    <h3 class="h3Titulo"><strong >${camisetaSEL.titulo}</strong></h3>
+                    <h3 class="h3Precio"><small>$ ${camisetaSEL.precio}</small></h3>
                 </div>
-                <div class="agregarAlCarrito" onclick="agregarAlCarrito(${camisetaSEL.idSEL})">
+                <div class="agregarAlCarrito" onclick="agregarAlCarrito(${camisetaSEL.id})">
                     <i class='bx bx-cart-add' id="itemCarrito"></i>
                 </div>
             </section>
@@ -252,20 +258,19 @@ crearProductosSEL ();
 
 
 
-
 //INTERNACIONALES
 function crearProductosINT () {
-    camisetasInt.forEach( (camiseta) => {
+    camisetasInt.forEach( (camisetaINT) => {
         productosElementosINT.innerHTML += `
             <section class="item">
                 <div class="imgItem">
-                    <img src="${camiseta.imagenINT}" alt="${camiseta.tituloINT}" class="imagen">
+                    <img src="${camisetaINT.imagen}" alt="${camisetaINT.titulo}" class="imagen">
                 </div>
                 <div class="titulo">
-                    <h3 class="h3Titulo"><strong >${camiseta.tituloINT}</strong></h3>
-                    <h3 class="h3Precio"><small>$ ${camiseta.precioINT}</small></h3>
+                    <h3 class="h3Titulo"><strong >${camisetaINT.titulo}</strong></h3>
+                    <h3 class="h3Precio"><small>$ ${camisetaINT.precio}</small></h3>
                 </div>
-                <div class="agregarAlCarrito" onclick="agregarAlCarrito(${camiseta.idINT})">
+                <div class="agregarAlCarrito" onclick="agregarAlCarrito(${camisetaINT.id})">
                     <i class='bx bx-cart-add' id="itemCarrito"></i>
                 </div>
             </section>
@@ -275,3 +280,19 @@ function crearProductosINT () {
 crearProductosINT ();
 
 
+
+
+
+//abrir y cerrar carrito
+let abrirCarrito = document.querySelector("#cart-icon");
+let iconoDeCarrito = document.querySelector(".cart");
+let cerrarCarrito = document.querySelector("#close-cart"); 
+
+abrirCarrito.onclick = (() => {
+    iconoDeCarrito.classList.add("active");
+
+});
+
+cerrarCarrito.onclick = (() => {
+    iconoDeCarrito.classList.remove("active");
+});
