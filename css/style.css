@@ -473,6 +473,13 @@ hr {
     margin-top: 5%;;
 }
 
+.listaProductosINT {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 5%;;
+}
+
 .item{
     width: 30%;
     justify-content: center;
