@@ -147,12 +147,20 @@ function agregarAlCarrito (id){
 
 //actualizar el carrito
 function actualizarCarrito(){
+<<<<<<< HEAD
         agregarItemsAlCarrito ();
         mostrarTotal ();
 
 
 //guardar carrito en localstorage
 
+=======
+    agregarItemsAlCarrito ();
+    mostrarTotal ();
+
+
+//agregar a local storage
+>>>>>>> eventos_rama
 localStorage.setItem("CARRITO", JSON.stringify(carrito));
 }
 
@@ -216,18 +224,32 @@ function cambiarNumeroDeUnidades(action, id){
 //total
 function mostrarTotal () {
     let total = 0;
+<<<<<<< HEAD
         itemsTotales = 0;
 
     carrito.forEach ((item) => {
         total += item.precio * item.numeroDeUnidades;
         itemsTotales += item.numeroDeUnidades;
+=======
+    let unidades = 0;
+
+    carrito.forEach ((item) => {
+        total += item.precio * item.numeroDeUnidades;
+        unidades += item.numeroDeUnidades;
+
+>>>>>>> eventos_rama
     });
 
 
     precioTotal.innerHTML = `
         <div class="total-title">TOTAL: $${total}</div>
+<<<<<<< HEAD
     `;
     notificacionCantidad.innerHTML = `${itemsTotales}`;
+=======
+    `
+    notificacionCantidad.innerHTML = unidades;
+>>>>>>> eventos_rama
 };
 
 
@@ -306,4 +328,7 @@ cerrarCarrito.onclick = (() => {
 });
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> eventos_rama
