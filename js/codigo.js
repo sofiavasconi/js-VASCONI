@@ -90,6 +90,10 @@ const precioTotal = document.querySelector("#total");
 
 const notificacionCantidad = document.querySelector(".cart-items");
 
+const resumenCompra = document.querySelector(".checkout-info");
+
+
+
 
 
 //crear productos
@@ -302,5 +306,26 @@ cerrarCarrito.onclick = (() => {
     iconoDeCarrito.classList.remove("active");
 });
 
+
+
+//resumen de la compra
+let resumenDeLaCompra = [];
+
+function agregarEnResumen () {
+
+    carrito.forEach ((item) => {
+        
+        resumenCompra.innerHTML += `
+            <div class="cart-item">
+                <img src="${item.imagen}" alt="Producto">
+                <div>
+                    <h4>${item.titulo}</h4>
+                    <h4>$${item.precio}</h4>
+                    <p>Cantidad: ${item.numeroDeUnidades}</p>
+                </div>
+            </div>
+        `;
+    });
+};
 
 

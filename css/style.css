@@ -525,11 +525,6 @@ hr {
 
 
 
-
-
-
-
-
 .logoFooter {
     display: flex;
     margin-left: 45%;
@@ -537,3 +532,47 @@ hr {
     height: 5%;
     margin-top: 5%;
 }
+
+
+.form-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.h4 {
+    color: #000000;
+    text-align: start;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+
+.botonForm {
+        display: flex;
+        margin: 1.5rem auto 0 auto;
+        padding: 12px 20px;
+        border: none;
+        background: #000000;
+        color: #ffffff;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+}
+    
+.botonForm:hover{
+        background: #038eb4;
+}
+
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    width: 300px;
+    border-color: #ffffff;
+}
+
+

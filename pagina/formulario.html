@@ -33,90 +33,82 @@
     <main>
         <form class="checkout-form form" id="form">
             <div class="form-layout">
-                
-                <div>
+                <div class="datosPersonales">
                     <h4 class="checkout-subtitle">Datos personales</h4>
 
                     <div class="form-control">
                         <label for="firstname">Nombre*</label>
-                        <input type="text" name="firstname" id="firstname" class="input" required>
+                        <input type="text" name="firstname" id="firstname" placeholder="NOMBRE" class="input" required>
                         <i class="fa-regular fa-circle-check"></i>
                         <i class="fa-regular fa-circle-xmark"></i>
                     </div>
 
                     <div class="form-control">
                         <label for="lastname">Apellido</label>
-                        <input type="text" name="lastname" id="lastname" class="input">
+                        <input type="text" name="lastname" id="lastname" placeholder="APELLIDO" class="input">
                         <i class="fa-regular fa-circle-check"></i>
                         <i class="fa-regular fa-circle-xmark"></i>
                     </div>
 
                     <div class="form-control">
                         <label for="email">Correo*</label>
-                        <input type="email" name="email" id="email" class="input" required>
+                        <input type="email" name="email" id="email" placeholder="CORREO" class="input" required>
                         <i class="fa-regular fa-circle-check"></i>
                         <i class="fa-regular fa-circle-xmark"></i>
                     </div>
 
                     <div class="form-control">
                         <label for="dni">DNI*</label>
-                        <input type="tel" name="dni" placeholder="99999999" maxlength="8" id="dni" class="input" required>
+                        <input type="tel" name="dni" placeholder="DNI" maxlength="8" id="dni" class="input" required>
                         <i class="fa-regular fa-circle-check"></i>
                         <i class="fa-regular fa-circle-xmark"></i>
                     </div>
 
                     <div class="form-control">
                         <label for="phone">Celular*</label>
-                        <input type="tel" name="phone" maxlength="10" id="phone" class="input" required>
+                        <input type="tel" name="phone" 
+                        placeholder="TELEFONO" maxlength="10" id="phone" class="input" required>
                         <i class="fa-regular fa-circle-check"></i>
                         <i class="fa-regular fa-circle-xmark"></i>
                     </div>
                 </div>
 
 
-                <div>
+                <div class="envio">
 
                     <h4 class="checkout-subtitle">Envío</h4>
 
                     <div class="form-control">
-                        <label for="street">Calle*</label>
-                        <input type="text" name="street" id="street" class="input" required>
+                        <label for="street">Dirección*</label>
+                        <input type="text" name="street" id="street" placeholder="DIRECCION" class="input" required>
                         <i class="fa-regular fa-circle-check"></i>
                         <i class="fa-regular fa-circle-xmark"></i>
                     </div>
 
                     <div class="form-control">
                         <label for="number">Número*</label>
-                        <input type="text" name="number" maxlength="5" id="number" class="input" required>
+                        <input type="text" name="number" id="number" placeholder="NUMERO" class="input" required>
                         <i class="fa-regular fa-circle-check"></i>
                         <i class="fa-regular fa-circle-xmark"></i>
                     </div>
                 </div>
 
-                <h4 class="checkout-subtitle">Método de pago</h4>
-                <div>
-                    <input type="radio" name="payment-mp" id="payment-mp" value="payment-mp" checked>
-                    <label for="payment-mp">Mercado Pago</label>
-                    <input type="radio" name="payment-mp" id="payment-mp" value="payment-mp" checked>
-                    <label for="payment-mp">Efectivo</label>
-                    <input type="radio" name="payment-mp" id="payment-mp" value="payment-mp" checked>
-                    <label for="payment-mp">Otros</label>
-                </div>
-            </div>
-            
-        </div>
-        
-        <div class="cart-summary">
-            <h4 class="checkout-subtitle">Resumen de la compra</h4>
-            <div class="checkout-info">
+                <div class="cart-summary">
+                    <h4 class="checkout-subtitle">Resumen de la compra</h4>
+                    <div class="checkout-info">
 
-            </div>
-            <h3 style="margin-bottom: 1.5rem">Total: $<span class="checkout-total">0</span></h3>
-            <button type="submit" class="banner-btn">Ir a Mercado Pago</button>
+                    </div>
+
+                    <h4 style="margin-bottom: 1.5rem">Total: $<span class="checkout-total">0</span></h4>
+                    <button type="button" class="botonForm btn-buy">Ir a Mercado Pago</button>
+                </div>
             </div>
         </form>
 
     </main>
+
+    <script src="../js/codigo.js"></script>
+    
 </body>
 </html>
 
