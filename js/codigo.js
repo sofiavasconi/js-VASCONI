@@ -304,6 +304,3 @@ abrirCarrito.onclick = (() => {
 cerrarCarrito.onclick = (() => {
     iconoDeCarrito.classList.remove("active");
 });
-
-
-
