@@ -121,7 +121,8 @@ crearProductos();
 
 
 //array carrito
-let carrito = [];
+let carrito = JSON.parse (localStorage.getItem("CARRITO"));
+actualizarCarrito ();
 
 
 //agregar al carrito
@@ -152,6 +153,9 @@ function agregarAlCarrito (id){
 function actualizarCarrito(){
         agregarItemsAlCarrito ();
         mostrarTotal ();
+
+//guardar en local storage
+localStorage.setItem("CARRITO", JSON.stringify(carrito));
 
 }
 
