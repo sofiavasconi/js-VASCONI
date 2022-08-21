@@ -121,8 +121,7 @@ crearProductos();
 
 
 //array carrito
-let carrito = JSON.parse(localStorage.getItem("CARRITO"));
-actualizarCarrito();
+let carrito = [];
 
 
 //agregar al carrito
@@ -154,8 +153,6 @@ function actualizarCarrito(){
         agregarItemsAlCarrito ();
         mostrarTotal ();
 
-//agregar a local storage
-localStorage.setItem("CARRITO", JSON.stringify(carrito));
 }
 
 
@@ -291,7 +288,6 @@ crearProductosINT ();
 
 
 
-
 //abrir y cerrar carrito
 let abrirCarrito = document.querySelector("#cart-icon");
 let iconoDeCarrito = document.querySelector(".cart");
@@ -305,6 +301,7 @@ abrirCarrito.onclick = (() => {
 cerrarCarrito.onclick = (() => {
     iconoDeCarrito.classList.remove("active");
 });
+
 
 
 
