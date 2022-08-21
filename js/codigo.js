@@ -96,6 +96,9 @@ const notificacionCantidad = document.querySelector(".cart-items");
 
 
 
+
+
+
 //crear productos
 
 //NACIONALES
@@ -308,8 +311,3 @@ abrirCarrito.onclick = (() => {
 cerrarCarrito.onclick = (() => {
     iconoDeCarrito.classList.remove("active");
 });
-
-
-
-
-
