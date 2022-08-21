@@ -152,7 +152,8 @@ function agregarAlCarrito (id){
 function actualizarCarrito(){
         agregarItemsAlCarrito ();
         mostrarTotal ();
-}
+        
+};
 
 
 //agregar items al carrito
