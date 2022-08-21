@@ -122,6 +122,11 @@ crearProductos();
 
 //array carrito
 let carrito = [];
+if(localStorage.getItem("carrito") !=null){
+    carrito=JSON.parse(localStorage.getItem("carrito"));
+};
+actualizarCarrito ();
+
 
 
 //agregar al carrito
@@ -184,6 +189,8 @@ function agregarItemsAlCarrito () {
         
         `
     });
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
 
