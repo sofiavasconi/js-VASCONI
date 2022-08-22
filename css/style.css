@@ -321,9 +321,11 @@ h3 {
     top: 0;
     right: -100%;
     width: 300px;
-    min-height: 100vh;
+    height: 625px;
     padding: 20px;
     background: #000000;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .cart.active{
@@ -574,5 +576,19 @@ hr {
     width: 300px;
     border-color: #ffffff;
 }
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(190, 188, 188);
+    border-radius: 4px;
+}
+
+
+
+
 
 

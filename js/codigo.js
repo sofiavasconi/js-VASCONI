@@ -90,6 +90,8 @@ const precioTotal = document.querySelector("#total");
 
 const notificacionCantidad = document.querySelector(".cart-items");
 
+const scrollCarrito = document.querySelector(".cart");
+
 
 
 
@@ -311,3 +313,10 @@ abrirCarrito.onclick = (() => {
 cerrarCarrito.onclick = (() => {
     iconoDeCarrito.classList.remove("active");
 });
+
+
+
+
+
+  
+  
