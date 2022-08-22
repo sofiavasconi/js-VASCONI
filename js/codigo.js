@@ -90,9 +90,6 @@ const precioTotal = document.querySelector("#total");
 
 const notificacionCantidad = document.querySelector(".cart-items");
 
-const scrollCarrito = document.querySelector(".cart");
-
-
 
 
 
@@ -103,7 +100,6 @@ const scrollCarrito = document.querySelector(".cart");
 
 //crear productos
 
-//NACIONALES
 function crearProductos () {
     camisetasNac.forEach( (camiseta) => {
         productosElementos.innerHTML += `
@@ -314,9 +310,3 @@ cerrarCarrito.onclick = (() => {
     iconoDeCarrito.classList.remove("active");
 });
 
-
-
-
-
-  
-  
