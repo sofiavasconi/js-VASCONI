@@ -1,7 +1,15 @@
-/*
+//variables
 const inputs = [...document.querySelectorAll(".input")]; 
 const infoFormulario = document.querySelector(".checkout-info");
-const totalFormulario = document.querySelector(".checkout-total"); 
+const totalFormulario = document.querySelector(".checkout-total");
+const form = document.querySelector(".checkout-form");
+const email = document.querySelector("#email");
+const firstname = document.querySelector("#firstname");
+const lastname = document.querySelector("#lastname");
+const dni = document.querySelector("#dni");
+const phone = document.querySelector("#phone");
+const street = document.querySelector("#street");
+const number = document.querySelector("#number"); 
 
 
 //resumen carrito
@@ -38,5 +46,5 @@ const formulario = () => {
     mostrarResumenCarrito(resumenCarrito);
     obtenerInfoFormulario(resumenCarrito);
 };
-*/
+
 
