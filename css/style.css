@@ -305,10 +305,6 @@ h3 {
 
 
 
-
-
-
-
 #cart-icon {
     font-size: 30px;
     cursor: pointer;
@@ -525,8 +521,6 @@ hr {
 }
 
 
-
-
 .logoFooter {
     display: flex;
     margin-left: 45%;
@@ -586,9 +580,4 @@ hr {
     background: rgb(190, 188, 188);
     border-radius: 4px;
 }
-
-
-
-
-
 
