@@ -98,6 +98,7 @@ const notificacionCantidad = document.querySelector(".cart-items");
 
 
 
+
 //crear productos
 
 function crearProductos () {
