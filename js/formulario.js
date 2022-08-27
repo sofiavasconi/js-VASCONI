@@ -25,17 +25,17 @@ function validarForm(evento){
 function agregarItemsAlCarrito () {
     carrito.forEach((item) => {
         resumenCompra.innerHTML += `
-        <img src="${item.imagen}" alt="${item.titulo}" class="cart-img">
-        <div class="cart-product-title">
-            ${item.titulo}
-        </div>
-        <div class="cart-price">
-            $ ${item.precio}
-        </div>
-        <div class="botonesCantidad">
-            <h4>TOTAL: $${total}<h4>
-        </div>
-    `;
+            <img src="${item.imagen}" alt="${item.titulo}" class="cart-img">
+            <div class="cart-product-title">
+                ${item.titulo}
+            </div>
+            <div class="cart-price">
+                $ ${item.precio}
+            </div>
+            <div class="botonesCantidad">
+                <h4>TOTAL: $${total}<h4>
+            </div>
+        `;
     });
 }
 
