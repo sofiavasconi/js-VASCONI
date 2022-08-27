@@ -99,6 +99,8 @@ const notificacionCantidad = document.querySelector(".cart-items");
 
 
 
+
+
 //crear productos
 
 function crearProductos () {
@@ -131,6 +133,7 @@ actualizarCarrito ();
 
 
 
+
 //agregar al carrito
 function agregarAlCarrito (id){
     //productos ya existen en carrito
@@ -159,7 +162,6 @@ function agregarAlCarrito (id){
 function actualizarCarrito(){
         agregarItemsAlCarrito ();
         mostrarTotal ();
-        
 };
 
 
