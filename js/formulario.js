@@ -20,10 +20,10 @@ function validarForm(evento){
 
 
 
-let resumenCarrito = [];
 
-function resumenDeCompra () {
-    resumenCarrito.forEach((item) => {
+
+function agregarItemsAlCarrito () {
+    carrito.forEach((item) => {
         resumenCompra.innerHTML += `
         <img src="${item.imagen}" alt="${item.titulo}" class="cart-img">
         <div class="cart-product-title">
@@ -38,8 +38,4 @@ function resumenDeCompra () {
     `;
     });
 }
-resumenDeCompra ();
 
-const resumenTotal = () => {
-    resumenDeCompra(resumenCarrito);
-}
