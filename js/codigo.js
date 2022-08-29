@@ -126,9 +126,8 @@ crearProductos();
 
 //array carrito
 let carrito = [];
-if(localStorage.getItem("carrito") !=null){
-    carrito=JSON.parse(localStorage.getItem("carrito"));
-};
+localStorage.getItem("carrito") !=null ? carrito=JSON.parse(localStorage.getItem("carrito")) : [];
+    
 actualizarCarrito ();
 
 
@@ -312,4 +311,3 @@ abrirCarrito.onclick = (() => {
 cerrarCarrito.onclick = (() => {
     iconoDeCarrito.classList.remove("active");
 });
-
