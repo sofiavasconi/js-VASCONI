@@ -104,7 +104,7 @@ const notificacionCantidad = document.querySelector(".cart-items");
 //crear productos
 
 function crearProductos () {
-    camisetasNac.forEach( (camiseta) => {
+    camisetasNac.forEach((camiseta) => {
         productosElementos.innerHTML += `
             <section class="item">
                 <div class="imgItem">
@@ -312,3 +312,4 @@ abrirCarrito.onclick = (() => {
 cerrarCarrito.onclick = (() => {
     iconoDeCarrito.classList.remove("active");
 });
+

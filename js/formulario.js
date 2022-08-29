@@ -20,9 +20,16 @@ function validarForm(evento){
 
 
 
+//resumen del carrito
+
+let carrito = () => {
+    carrito = JSON.parse(localStorage.getItem("carrito"));
+    return carrito.find(item => item.id === id); 
+};
+resumenCarrito ();
 
 
-function agregarItemsAlCarrito () {
+function resumenCarrito (carrito) {
     carrito.forEach((item) => {
         resumenCompra.innerHTML += `
             <img src="${item.imagen}" alt="${item.titulo}" class="cart-img">
