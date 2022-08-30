@@ -90,6 +90,8 @@ const precioTotal = document.querySelector("#total");
 
 const notificacionCantidad = document.querySelector(".cart-items");
 
+const botonParaAgregar = document.querySelector(".agregarAlCarrito");
+
 
 
 
@@ -141,7 +143,7 @@ function agregarAlCarrito (id){
     }else{
          const item = camisetasNac.find((camiseta) => camiseta.id === id);
          const itemSEL = camisetasSel.find((camisetaSEL) => camisetaSEL.id === id);
-         const itemINT = camisetasInt.find((camisetaINT) => camisetaINT.id === id)
+         const itemINT = camisetasInt.find((camisetaINT) => camisetaINT.id === id);
         carrito.push ({
             ...item, 
             numeroDeUnidades : 1,
@@ -151,10 +153,19 @@ function agregarAlCarrito (id){
             numeroDeUnidades : 1
             
         });
-    }
+
+    }; //alert("producto agregado al carrito")
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Producto agregado al carrito',
+            showConfirmButton: false,
+            timer: 1500
+        })
 
     actualizarCarrito ();
-};
+}
+
 
 
 //actualizar el carrito

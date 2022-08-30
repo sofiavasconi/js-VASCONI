@@ -1,3 +1,4 @@
+
 //variables 
 const formulario = document.querySelector("#form");
 const email = document.querySelector("#email");
@@ -16,8 +17,24 @@ const botonFinal = document.querySelector ("#botonFinal");
 formulario.addEventListener("submit", validarForm);
 
 function validarForm(evento){
-    (email.value=="")||(nombre.value="")||(dni.value="")||(telefono.value="")||(direccion.value="")||(numero.value="") ? evento.preventDefault () : alert("Su compra fue realizada con éxito.")
+    if((email.value=="")||(nombre.value="")||(dni.value="")||(telefono.value="")||(direccion.value="")||(numero.value="")) {
+        evento.preventDefault (); 
+    }
+    //alert("Compra realizada con exito!")
+    
 }
+
+
+//sweet alert
+botonFinal.addEventListener('click', () => {
+    Swal.fire({
+        title: 'Tu compra fue realizada con éxito!',
+        text: 'Gracias por elegirnos.',
+        icon: 'success',
+        confirmButtonText: 'CERRAR'
+    })
+})
+
 
 
 
@@ -40,7 +57,7 @@ botonFinal.onclick=()=> {
                 <h4>TOTAL: $${total}<h4>
             </div>
         `;
-    });
+    });    
 }; 
 
 
