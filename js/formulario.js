@@ -8,6 +8,7 @@ const direccion = document.querySelector("#street");
 const numero = document.querySelector("#number"); 
 const botonForm = document.querySelector(".botonForm"); 
 const resumenCompra = document.querySelector("#resumenCompra");
+const botonFinal = document.querySelector ("#botonFinal");
 
 
 
@@ -21,16 +22,12 @@ function validarForm(evento){
 
 
 //resumen del carrito
-
-let carrito = () => {
-    carrito = JSON.parse(localStorage.getItem("carrito"));
-    return carrito.find(item => item.id === id); 
-};
-resumenCarrito ();
+productosFinales = JSON.parse(localStorage.getItem("carrito"));
+console.log(productosFinales);
 
 
-function resumenCarrito (carrito) {
-    carrito.forEach((item) => {
+botonFinal.onclick=()=> {
+    productosFinales.forEach((item) => {
         resumenCompra.innerHTML += `
             <img src="${item.imagen}" alt="${item.titulo}" class="cart-img">
             <div class="cart-product-title">
@@ -39,10 +36,11 @@ function resumenCarrito (carrito) {
             <div class="cart-price">
                 $ ${item.precio}
             </div>
-            <div class="botonesCantidad">
+            <div class="cantidadFinal">
                 <h4>TOTAL: $${total}<h4>
             </div>
         `;
     });
-}
+}; 
+
 
