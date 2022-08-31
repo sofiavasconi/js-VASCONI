@@ -321,10 +321,10 @@ cerrarCarrito.onclick = (() => {
 //toastify
 botonParaAgregar.addEventListener('click', () => {
     Toastify({
-        text: 'Tu compra fue realizada con éxito!',
+        text: 'Producto agregado al carrito',
         duration: 3000,
         position: 'center',
-        gravity: 'bottom',
+        gravity: 'top',
         style: {
             background: '#000000'
         }

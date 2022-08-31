@@ -36,6 +36,7 @@ botonFinal.addEventListener('click', () => {
 
 
 
+
 //resumen del carrito
 productosFinales = JSON.parse(localStorage.getItem("carrito"));
 console.log(productosFinales);
