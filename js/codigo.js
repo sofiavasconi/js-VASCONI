@@ -126,6 +126,7 @@ function crearProductos () {
 crearProductos();
 
 
+
 //array carrito
 let carrito = [];
 localStorage.getItem("carrito") !=null ? carrito=JSON.parse(localStorage.getItem("carrito")) : [];
@@ -154,18 +155,10 @@ function agregarAlCarrito (id){
             
         });
 
-    }; //alert("producto agregado al carrito")
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Producto agregado al carrito',
-            showConfirmButton: false,
-            timer: 1500
-        })
+    }; 
 
     actualizarCarrito ();
 }
-
 
 
 //actualizar el carrito
@@ -205,6 +198,7 @@ function agregarItemsAlCarrito () {
     });
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
+    
 }
 
 
@@ -227,7 +221,6 @@ function cambiarNumeroDeUnidades(action, id){
             numeroDeUnidades,
         }
     })
-
     actualizarCarrito ();
 }
 
@@ -322,3 +315,18 @@ abrirCarrito.onclick = (() => {
 cerrarCarrito.onclick = (() => {
     iconoDeCarrito.classList.remove("active");
 });
+
+
+
+//toastify
+botonParaAgregar.addEventListener('click', () => {
+    Toastify({
+        text: 'Tu compra fue realizada con éxito!',
+        duration: 3000,
+        position: 'center',
+        gravity: 'bottom',
+        style: {
+            background: '#000000'
+        }
+    }).showToast ();
+})

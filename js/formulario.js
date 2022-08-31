@@ -17,24 +17,22 @@ const botonFinal = document.querySelector ("#botonFinal");
 formulario.addEventListener("submit", validarForm);
 
 function validarForm(evento){
-    if((email.value=="")||(nombre.value="")||(dni.value="")||(telefono.value="")||(direccion.value="")||(numero.value="")) {
-        evento.preventDefault (); 
-    }
-    //alert("Compra realizada con exito!")
-    
+    (email.value=="")||(nombre.value="")||(dni.value="")||(telefono.value="")||(direccion.value="")||(numero.value="") ? evento.preventDefault () : []; 
 }
 
 
 //sweet alert
 botonFinal.addEventListener('click', () => {
-    Swal.fire({
-        title: 'Tu compra fue realizada con éxito!',
-        text: 'Gracias por elegirnos.',
-        icon: 'success',
-        confirmButtonText: 'CERRAR'
-    })
+    Toastify({
+        text: 'Tu compra fue realizada con éxito!',
+        duration: 3000,
+        position: 'center',
+        gravity: 'bottom',
+        style: {
+            background: '#000000'
+        }
+    }).showToast ();
 })
-
 
 
 
