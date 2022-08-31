@@ -17,22 +17,23 @@ const botonFinal = document.querySelector ("#botonFinal");
 formulario.addEventListener("submit", validarForm);
 
 function validarForm(evento){
-    (email.value=="")||(nombre.value="")||(dni.value="")||(telefono.value="")||(direccion.value="")||(numero.value="") ? evento.preventDefault () : []; 
+    (email.value=="")||(nombre.value="")||(dni.value="")||(telefono.value="")||(direccion.value="")||(numero.value="") ? evento.preventDefault () : [];
+};
+
+//toastify     
+if (validarForm){
+    botonFinal.addEventListener('click', () => {
+        Toastify({
+            text: 'ERROR, debe llenar todos los campos.',
+            duration: 3000,
+            position: 'center',
+            gravity: 'bottom',
+            style: {
+                background: '#000000'
+            }
+        }).showToast ();
+    });
 }
-
-
-//sweet alert
-botonFinal.addEventListener('click', () => {
-    Toastify({
-        text: 'Tu compra fue realizada con éxito!',
-        duration: 3000,
-        position: 'center',
-        gravity: 'bottom',
-        style: {
-            background: '#000000'
-        }
-    }).showToast ();
-})
 
 
 

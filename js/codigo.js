@@ -154,7 +154,16 @@ function agregarAlCarrito (id){
             numeroDeUnidades : 1
             
         });
-
+        //toastify
+        Toastify({
+            text: 'Producto agregado al carrito.',
+            duration: 1500,
+            position: 'center',
+            gravity: 'bottom',
+            style: {
+                background: '#000000',
+            }
+        }).showToast ();        
     }; 
 
     actualizarCarrito ();
@@ -318,15 +327,3 @@ cerrarCarrito.onclick = (() => {
 
 
 
-//toastify
-botonParaAgregar.addEventListener('click', () => {
-    Toastify({
-        text: 'Producto agregado al carrito',
-        duration: 3000,
-        position: 'center',
-        gravity: 'top',
-        style: {
-            background: '#000000'
-        }
-    }).showToast ();
-})
