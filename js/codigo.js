@@ -76,6 +76,7 @@ const camisetasInt = [
 
 
 
+
 //seleccion de elementos
 
 const productosElementos = document.querySelector(".listaProductos");
@@ -283,7 +284,6 @@ function crearProductosSEL () {
     } );
 }
 crearProductosSEL ();
-
 
 
 
