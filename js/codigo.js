@@ -48,6 +48,7 @@ const camisetasSel = [
     {id: 21, titulo: "CAMISETA ESPAÑA", precio: 15000, imagen: "../img/españa.jpg"},
 ];
 
+
 const camisetasInt = [
 
     {id: 22, titulo: "CAMISETA TITULAR PSG", precio: 15000, imagen: "../img/psg.jpg"},
@@ -73,6 +74,7 @@ const camisetasInt = [
     {id: 32, titulo: "CAMISETA TITULAR PALMEIRAS", precio: 15000, imagen: "../img/palmeiras.jpg"},
 
 ];
+
 
 
 
@@ -285,6 +287,30 @@ function crearProductosSEL () {
 }
 crearProductosSEL ();
 
+/*
+//INTERNACIONALES CON JSON
+fetch ('camisetas.json')
+    .then( (res=>res.json))
+    .then( (camisetaINT => {
+        camisetasInt.forEach( (camisetaINT) => {
+            productosElementosINT.innerHTML += `
+                <section class="item">
+                    <div class="imgItem">
+                        <img src="${camisetaINT.imagen}" alt="${camisetaINT.titulo}" class="imagen">
+                    </div>
+                    <div class="titulo">
+                        <h3 class="h3Titulo"><strong >${camisetaINT.titulo}</strong></h3>
+                        <h3 class="h3Precio"><small>$ ${camisetaINT.precio}</small></h3>
+                    </div>
+                    <div class="agregarAlCarrito" onclick="agregarAlCarrito(${camisetaINT.id})">
+                        <i class='bx bx-cart-add' id="itemCarrito"></i>
+                    </div>
+                </section>
+            `;
+        } );crearProductosINT ();
+    }))
+*/
+
 
 
 //INTERNACIONALES
@@ -307,6 +333,7 @@ function crearProductosINT () {
     } );
 }
 crearProductosINT ();
+
 
 
 
