@@ -48,7 +48,7 @@ const camisetasSel = [
     {id: 21, titulo: "CAMISETA ESPAÑA", precio: 15000, imagen: "../img/españa.jpg"},
 ];
 
-
+/*
 const camisetasInt = [
 
     {id: 22, titulo: "CAMISETA TITULAR PSG", precio: 15000, imagen: "../img/psg.jpg"},
@@ -74,7 +74,7 @@ const camisetasInt = [
     {id: 32, titulo: "CAMISETA TITULAR PALMEIRAS", precio: 15000, imagen: "../img/palmeiras.jpg"},
 
 ];
-
+*/
 
 
 
@@ -287,7 +287,7 @@ function crearProductosSEL () {
 }
 crearProductosSEL ();
 
-/*
+
 //INTERNACIONALES CON JSON
 fetch ('camisetas.json')
     .then( (res=>res.json))
@@ -307,12 +307,12 @@ fetch ('camisetas.json')
                     </div>
                 </section>
             `;
-        } );crearProductosINT ();
-    }))
-*/
+        });
+    }));
+crearProductosINT ();
 
 
-
+/*
 //INTERNACIONALES
 function crearProductosINT () {
     camisetasInt.forEach( (camisetaINT) => {
@@ -333,7 +333,7 @@ function crearProductosINT () {
     } );
 }
 crearProductosINT ();
-
+*/
 
 
 
