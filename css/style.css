@@ -151,7 +151,7 @@ h1 {
 
 
 
-h3 {
+h3, #selecciones, #internacionales {
     color: #000000;
     font-family: 'Raleway', sans-serif;
     font-size: 35px; 
