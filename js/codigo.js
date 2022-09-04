@@ -331,34 +331,31 @@ cerrarCarrito.onclick = (() => {
 
 
 
-//API
-function obtenerDatos () {
-    const URLGETSA="https://www.thesportsdb.com/api/v1/json/2/searchevents.php?e=Argentina_vs_Saudi%20Arabia";
-    fetch(URLGETSA)
-        .then(resultadoSA => resultadoSA.json())
-        .then(partidoSA => {
-            console.log(partidoSA);
-            partidoSA.forEach (event => {
-                document.querySelector(".partidos").innerHTML += `
-                    <tr>
-                        <td>${event.strFilename}</td>
-                    </tr>
-                `;
-            });
-        })
+//API MUNDIAL
+async function obtenerFecha () {
+    const URLARABIA = "https://www.thesportsdb.com/api/v1/json/2/searchevents.php?e=Argentina_vs_Saudi%20Arabia";
+    const respAR=await fetch(URLARABIA);
+    const dataAR=await respAR.json();
+    document.getElementById("arabia").innerHTML+=`<img src="${dataAR.event[0].strThumb}" class="imgArabia">
+    <p class="textoArabia">${dataAR.event[0].dateEvent}</p>`;
+    
 
-    const URLGETM="https://www.thesportsdb.com/api/v1/json/2/searchevents.php?e=Argentina_vs_Mexico&s=2022";
-    fetch(URLGETM)
-        .then(resultadoM => resultadoM.json())
-        .then(partidoM => {
-            console.log(partidoM);
-        })
+    const URLMEXICO = "https://www.thesportsdb.com/api/v1/json/2/searchevents.php?e=Argentina_vs_Mexico&s=2022";
+    const respM=await fetch(URLMEXICO)
+    const dataM=await respM.json()
+    document.getElementById("mexico").innerHTML+=`<img src="${dataM.event[0].strThumb}" class="imgMexico"> 
+    <p class="textoMexico">${dataM.event[0].dateEvent}</p>`;
+    
 
-    const URLGETP="https://www.thesportsdb.com/api/v1/json/2/searchevents.php?e=Poland_vs_Argentina&s=2022";
-    fetch(URLGETP)
-        .then(resultadoP => resultadoP.json())
-        .then(partidoP => {
-            console.log(partidoP);
-        })
+    const URLPOLONIA = "https://www.thesportsdb.com/api/v1/json/2/searchevents.php?e=Poland_vs_Argentina&s=2022";
+    const respP=await fetch(URLPOLONIA)
+    const dataP=await respP.json()
+    document.getElementById("polonia").innerHTML+=`<img src="${dataP.event[0].strThumb}" class="imgPolonia">
+    <p class="textoPolonia">${dataP.event[0].dateEvent}</p>`;
+    
+
+    console.log(dataAR);
+    console.log (dataM);
+    console.log (dataP);
 }
-obtenerDatos();
+obtenerFecha();

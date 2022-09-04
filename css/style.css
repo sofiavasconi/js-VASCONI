@@ -581,3 +581,28 @@ hr {
     border-radius: 4px;
 }
 
+
+h5 {
+    text-align: center;
+    color: #038eb4;
+    font-size: 25px;
+    margin-bottom: 3%;
+}
+
+
+.apis {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.imgArabia, .imgMexico, .imgPolonia {
+    width: 95%;
+}
+
+.textoArabia, .textoMexico, .textoPolonia {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    color: #038eb4;
+}
