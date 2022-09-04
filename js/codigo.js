@@ -331,3 +331,34 @@ cerrarCarrito.onclick = (() => {
 
 
 
+//API
+function obtenerDatos () {
+    const URLGETSA="https://www.thesportsdb.com/api/v1/json/2/searchevents.php?e=Argentina_vs_Saudi%20Arabia";
+    fetch(URLGETSA)
+        .then(resultadoSA => resultadoSA.json())
+        .then(partidoSA => {
+            console.log(partidoSA);
+            partidoSA.forEach (event => {
+                document.querySelector(".partidos").innerHTML += `
+                    <tr>
+                        <td>${event.strFilename}</td>
+                    </tr>
+                `;
+            });
+        })
+
+    const URLGETM="https://www.thesportsdb.com/api/v1/json/2/searchevents.php?e=Argentina_vs_Mexico&s=2022";
+    fetch(URLGETM)
+        .then(resultadoM => resultadoM.json())
+        .then(partidoM => {
+            console.log(partidoM);
+        })
+
+    const URLGETP="https://www.thesportsdb.com/api/v1/json/2/searchevents.php?e=Poland_vs_Argentina&s=2022";
+    fetch(URLGETP)
+        .then(resultadoP => resultadoP.json())
+        .then(partidoP => {
+            console.log(partidoP);
+        })
+}
+obtenerDatos();
