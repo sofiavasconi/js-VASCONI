@@ -36,12 +36,9 @@ if (validarForm){
 }
 
 
-
-
 //resumen del carrito
 productosFinales = JSON.parse(localStorage.getItem("carrito"));
 console.log(productosFinales);
-
 
 botonFinal.onclick=()=> {
     productosFinales.forEach((item) => {
@@ -57,7 +54,10 @@ botonFinal.onclick=()=> {
                 <h4>TOTAL: $${total}<h4>
             </div>
         `;
-    });    
+    }); 
+    productosFinales ();   
 }; 
+
+
 
 
