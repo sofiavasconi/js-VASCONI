@@ -36,28 +36,12 @@ if (validarForm){
 }
 
 
+
 //resumen del carrito
 productosFinales = JSON.parse(localStorage.getItem("carrito"));
 console.log(productosFinales);
 
-botonFinal.onclick=()=> {
-    productosFinales.forEach((item) => {
-        resumenCompra.innerHTML += `
-            <img src="${item.imagen}" alt="${item.titulo}" class="cart-img">
-            <div class="cart-product-title">
-                ${item.titulo}
-            </div>
-            <div class="cart-price">
-                $ ${item.precio}
-            </div>
-            <div class="cantidadFinal">
-                <h4>TOTAL: $${total}<h4>
-            </div>
-        `;
-    }); 
-    productosFinales ();   
-}; 
 
-
-
-
+productosFinales.forEach((item) => {
+    resumenCompra.innerHTML +=JSON.stringify(productosFinales)
+}); 
