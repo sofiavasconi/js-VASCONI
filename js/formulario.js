@@ -41,7 +41,8 @@ if (validarForm){
 productosFinales = JSON.parse(localStorage.getItem("carrito"));
 console.log(productosFinales);
 
+filtrarResumen = JSON.stringify(productosFinales.titulo);
 
 productosFinales.forEach((item) => {
-    resumenCompra.innerHTML +=JSON.stringify(productosFinales)
+    resumenCompra.innerHTML += filtrarResumen;
 }); 
