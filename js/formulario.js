@@ -41,8 +41,31 @@ if (validarForm){
 productosFinales = JSON.parse(localStorage.getItem("carrito"));
 console.log(productosFinales);
 
-filtrarResumen = JSON.stringify(productosFinales.titulo);
+botonFinal.onclick=async()=> {
 
+    const item =JSON.stringify(productosFinales);
+    let listaResumen = " ";
+
+    item.forEach(item => {
+        listaResumen+= `
+            <img src="${item.imagen}" alt="${item.titulo}" class="cart-img">
+            <div class="cart-product-title">
+                ${item.titulo}
+            </div>
+            <div class="cart-price">
+                $ ${item.precio}
+            </div>
+            <div class="cantidadFinal">
+                <h4>TOTAL: $${total}<h4>
+            </div>
+        `;
+    });
+};
+resumenCompra.innerHTML=listaResumen;
+
+
+/*
 productosFinales.forEach((item) => {
-    resumenCompra.innerHTML += filtrarResumen;
+    resumenCompra.innerHTML += JSON.stringify(productosFinales);
 }); 
+*/

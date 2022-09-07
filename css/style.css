@@ -530,6 +530,36 @@ hr {
 }
 
 
+.mainForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "form1 form form2"
+                         "form1 form form2";
+    margin-top: 5%;
+    margin-left: 10%;
+    justify-content: space-around;
+    width: 90%;
+    height: 80%;
+}
+
+.form1 {
+    grid-area: form1;
+    width: 70%;
+}
+
+.form2 {
+    grid-area: form2;
+    width: 70%;
+}
+
+#form {
+    grid-area: form;
+    width: 55%;
+
+}
+
+
 .form-layout {
     display: flex;
     flex-direction: row;
@@ -567,10 +597,13 @@ hr {
     display: flex;
     flex-direction: column;
     margin: 5%;
-    width: 300px;
+    width: 250px;
     border-color: #ffffff;
 }
 
+.text-muted {
+    margin-left: 10%;
+}
 
 ::-webkit-scrollbar {
     width: 10px;

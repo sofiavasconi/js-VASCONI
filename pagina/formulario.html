@@ -32,11 +32,12 @@
         <h3>FINALIZAR COMPRA</h3>
     </header>
 
-    <main>
+    <main class="mainForm">
+        <img src="../img/form1.jpg" class="form1" alt="Formulario">
         <form class="checkout-form form" id="form">
             <div class="form-layout">
                 <div class="datosPersonales">
-                    <h4 class="checkout-subtitle">Datos personales</h4>
+                    <h4 class="checkout-subtitle">Completá los datos para finalizar tu compra</h4>
 
                     <div class="form-control">
                         <label for="firstname">Nombre*</label>
@@ -60,54 +61,30 @@
                     </div>
 
                     <div class="form-control">
-                        <label for="dni">DNI*</label>
-                        <input type="text" name="dni" placeholder="DNI" maxlength="8" id="dni" class="input" required>
-                        <i class="fa-regular fa-circle-check"></i>
-                        <i class="fa-regular fa-circle-xmark"></i>
-                    </div>
-
-                    <div class="form-control">
                         <label for="phone">Celular*</label>
                         <input type="text" name="phone" 
                         placeholder="TELEFONO" maxlength="10" id="phone" class="input" required>
                         <i class="fa-regular fa-circle-check"></i>
                         <i class="fa-regular fa-circle-xmark"></i>
                     </div>
-                </div>
 
-
-                <div class="envio">
-
-                    <h4 class="checkout-subtitle">Envío</h4>
-
-                    <div class="form-control">
-                        <label for="street">Dirección*</label>
-                        <input type="text" name="street" id="street" placeholder="DIRECCION" class="input" required>
-                        <i class="fa-regular fa-circle-check"></i>
-                        <i class="fa-regular fa-circle-xmark"></i>
-                    </div>
-
-                    <div class="form-control">
-                        <label for="number">Número*</label>
-                        <input type="text" name="number" id="number" placeholder="NUMERO" class="input" required>
-                        <i class="fa-regular fa-circle-check"></i>
-                        <i class="fa-regular fa-circle-xmark"></i>
-                    </div>
                     <div class= "text-muted">* = campo obligatorio</div>
-                </div>
 
-                <div class="finalizarCompra">
-                    <h4>RESUMEN DE TU COMPRA</h4>
-                    <div id="resumenCompra">
- 
-                    </div>
                     <button id="botonFinal" type="submit" class="botonForm btn-buy">TERMINAR COMPRA</button>
                 </div>
+                    
             </div>
         </form>
 
+    <img src="../img/form2.jpg" class="form2" alt="Formulario">
+
     </main>
 
+    <footer>
+        <img class="logoFooter" src="../img/logoP.jpg">
+    </footer>
+
+    
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 
