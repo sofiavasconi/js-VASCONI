@@ -39,41 +39,35 @@
                 <div class="datosPersonales">
                     <h4 class="checkout-subtitle">Completá los datos para finalizar tu compra</h4>
 
-                    <div class="form-control">
-                        <label for="firstname">Nombre*</label>
-                        <input type="text" name="firstname" id="firstname" placeholder="NOMBRE" class="input" required>
-                        <i class="fa-regular fa-circle-check"></i>
-                        <i class="fa-regular fa-circle-xmark"></i>
+                    <div class="form-control" id="form-nombre">
+                        <label for="name" class="labelNombre">Nombre y Apellido*</label>
+                        <div class="form-input">
+                            <input type="text" name="name" id="name" placeholder="NOMBRE" class="input">
+                        </div>
                     </div>
+                    
 
-                    <div class="form-control">
-                        <label for="lastname">Apellido</label>
-                        <input type="text" name="lastname" id="lastname" placeholder="APELLIDO" class="input">
-                        <i class="fa-regular fa-circle-check"></i>
-                        <i class="fa-regular fa-circle-xmark"></i>
-                    </div>
-
-                    <div class="form-control">
+                    <div class="form-control" id="form-dni">
                         <label for="dni">DNI*</label>
-                        <input type="text" name="phone" 
-                        placeholder="DNI" maxlength="10" id="dni" class="input" required>
-                        <i class="fa-regular fa-circle-check"></i>
-                        <i class="fa-regular fa-circle-xmark"></i>
+                        <div class="form-input">
+                            <input type="text" name="dni" placeholder="DNI" maxlength="10" id="dni" class="input">
+                        </div>
                     </div>
+                    
 
-                    <div class="form-control">
+                    <div class="form-control" id="form-email">
                         <label for="email">Correo*</label>
-                        <input type="email" name="email" id="email" placeholder="CORREO" class="input" required>
-                        <i class="fa-regular fa-circle-check"></i>
-                        <i class="fa-regular fa-circle-xmark"></i>
+                        <div class="form-input">
+                            <input type="email" name="email" id="email" placeholder="CORREO" class="input">
+                        </div>
                     </div>
 
-                    <div class="form-control">
-                        <label for="phone">Celular*</label>
-                        <input type="text" name="phone" 
-                        placeholder="TELEFONO" maxlength="10" id="phone" class="input" required>
-                        <i class="fa-regular fa-circle-check"></i>
-                        <i class="fa-regular fa-circle-xmark"></i>
+                    <div class="form-control formulario-incorrecto" id="form-phone">
+                        <label for="phone">Telefono*</label>
+                        <div class="form-input">
+                            <input type="text" name="phone" 
+                            placeholder="TELEFONO" maxlength="10" id="phone" class="input">
+                        </div>
                     </div>
 
                     <div class= "text-muted">* = campo obligatorio</div>
