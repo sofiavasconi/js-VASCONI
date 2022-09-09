@@ -152,7 +152,7 @@ h1 {
 
 
 
-h3, #selecciones, #internacionales {
+h3, #selecciones, #internacionales, .h3TituloC, .h3Final {
     color: #000000;
     font-family: 'Raleway', sans-serif;
     font-size: 35px; 
@@ -522,7 +522,7 @@ hr {
 }
 
 
-.logoFooter {
+.logoFooter, .logoFooterFinal {
     display: flex;
     margin-left: 45%;
     width: 10%;
@@ -664,22 +664,29 @@ h5 {
 
     .navbar {
         height: 2%;
-        width: 70%;
+        width: 100%;
     }
 
     .logo {
-        width: 50%;
+        width: 45%;
+    }
+
+    #cart-icon {
+        font-size: 25px;
+        margin-bottom: 2%;
+        margin-right: 1%;
     }
 
     .welcomePage-logo {
-        width: 92%;
-        margin-top: 10%;
-        margin-left: 40%;
+        width: 95%;
+        margin-top: 5%;
+        margin-left: 50%;
     }
 
     h1 {
-        width: 165%;
+        width: 180%;
         font-size: 20px;
+        margin-left: 8%;
         text-align: center;
     }
 
@@ -687,23 +694,31 @@ h5 {
         display: none;
     }
 
-
     .grid-info {
-        display: none;
+        display: flex;
+        flex-direction: row;
+        margin-top: 5%;
     }
 
+    .grid-envio {
+        width: 190%;
+    }
 
     .titulo {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .texto {
-        font-size: 8px;
+        width: 90%;
+        font-size: 10px;
+        margin-top: 5%;
+        margin-left: 5%;
     }
     
-    h3 {
-        font-size: 20px;
+    h3, #selecciones, #internacionales {
+        font-size: 25px;
         text-align: center;
+        margin-top: 10%;
     }
 
     .productos {
@@ -717,18 +732,19 @@ h5 {
         margin-top: 3%;
         text-align: center;
         position: relative;
+        
     }
     
     .nacionalImgRES, .seleccionImgRES, .internacionalImgRES {
-        width: 85%;
-        margin-right: 12%;
+        width: 98%;
+        margin-bottom: 3%;
     }
     
     
     .subtituloNRES {
         position: absolute;
-        top: 18%;
-        left: 45%;
+        top: 15%;
+        left: 50%;
         transform: translate(-50%, -50%);
         color: #ffffff;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -740,7 +756,7 @@ h5 {
     .subtituloSRES {
         position: absolute;
         top: 50%;
-        left: 45%;
+        left: 50%;
         transform: translate(-50%, -50%);
         color: #ffffff;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -751,13 +767,74 @@ h5 {
     
     .subtituloIRES {
         position: absolute;
-        top: 85%;
-        left: 45%;
+        top: 83%;
+        left: 50%;
         transform: translate(-50%, -50%);
         color: #ffffff;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         font-family: 'Raleway', sans-serif;
         font-size: 25px;
+    }
+
+    .h3TituloC {
+        margin-top: 20%;
+        font-size: 25px;
+    }
+
+    .cart-items {
+        margin-right: 35%;
+    }
+
+    .cart {
+        height: 100%;
+    }
+
+    .item {
+        width: 50%;
+    }
+
+    .apis{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imgArabia, .imgMexico, .imgPolonia{
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .h3Final {
+        font-size: 25px;
+        text-align: center;
+        margin-top: 20%;
+        margin-bottom: 5%;
+    }
+
+    .form1 {
+        display: none;
+    }
+
+    .form2 {
+        display: none;
+    }
+
+    #form {
+        margin-left: 13%;
+    }
+
+    .datosPersonales {
+        margin-bottom: 40%;
+    }
+
+    .logoFooter {
+        width: 20%;
+        justify-self: center;
+    }
+
+    .logoFooterFinal {
+        width: 20%;
+        justify-self: center;
+        margin-top: 15%;
     }
     
 }

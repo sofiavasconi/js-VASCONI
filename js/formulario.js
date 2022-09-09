@@ -105,3 +105,20 @@ function validarFormulario (){
         return false;
     }
 }
+
+/*
+//confirmar compra
+botonFinal.onclick = (() => {
+    if(validarNombre && validarDNI && validarEmail && validarTelefono){
+        Toastify({
+            text: 'Tu compra ha sido realizada con éxito! Nos vamos a comunicar con vos vía mail.',
+            duration: 1000,
+            position: 'center',
+            gravity: 'bottom',
+            style: {
+                background: '#000000'
+            }
+        }).showToast ();
+    }
+});
+*/
