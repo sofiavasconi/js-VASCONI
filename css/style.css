@@ -536,10 +536,10 @@ hr {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "form1 form form2"
                          "form1 form form2";
-    margin-top: 5%;
-    margin-left: 10%;
-    justify-content: space-around;
+    margin-top: 2%;
+    justify-content: space-between;
     width: 90%;
+    margin-left: 7%;
     height: 80%;
 }
 
@@ -564,7 +564,8 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 5%;
+    margin-top: 10%;
+    margin-left: 45%;
 }
 
 .h4 {
@@ -577,7 +578,7 @@ hr {
 
 .botonForm {
         display: flex;
-        margin: 1.5rem auto 0 auto;
+        margin: 1.5rem auto 0 1.5rem;
         padding: 12px 20px;
         border: none;
         background: #000000;
@@ -601,6 +602,13 @@ hr {
     border-color: #ffffff;
 }
 
+#nombreError, #dniError, #emailError, #telefonoError {
+    color: red;
+}
+
+#check {
+    color: green;
+}
 
 .text-muted {
     margin-left: 10%;

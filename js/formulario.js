@@ -1,155 +1,107 @@
 //variables 
 const formulario = document.querySelector("#form");
-const inputs = document.querySelectorAll(".input");
-const email = document.querySelector("#email");
 const nombre = document.querySelector("#name");
 const dni = document.querySelector("#dni");
+const email = document.querySelector("#email");
 const telefono = document.querySelector("#phone");  
 const botonFinal = document.querySelector ("#botonFinal");
-
-window.addEventListener("load", () => {
-    formulario.addEventListener("submit", (e) => {
-        e.preventDefault();
-        validarCampos()
-    })
-
-    const validarCampos = ()=> {
-        const nombreValor= nombre.value.trim()
-        const dniValor= dni.value.trim()
-        const emailValor= email.value.trim()
-        const telefonoValor= telefono.value.trim();
+const nombreError = document.querySelector ("#nombreError");
+const dniError = document.querySelector ("#dniError");
+const emailError = document.querySelector ("#emailError");
+const telefonoError = document.querySelector ("#telefonoError");
 
 
 
-        if(nombreValor==="" || dniValor==="" || emailValor==="" ||telefonoValor===""){
-            Toastify({
-                text: 'ERROR, debe llenar todos los campos.',
-                duration: 3000,
-                position: 'center',
-                gravity: 'bottom',
-                style: {
-                    background: '#000000'
-                }
-            }).showToast ();
-        }else{
-            Toastify({
-                text: 'Tu compra ha sido realizada con éxito! Nos vamos a comunicar con vos vía email.',
-                duration: 4000,
-                position: 'center',
-                gravity: 'bottom',
-                style: {
-                    background: '#000000'
-                }
-            }).showToast ();
-        }
+//validar nombre
+function validarNombre (){
+    const valorNombre = nombre.value;
+
+    if(valorNombre.length==0){
+        nombreError.innerHTML = `<i class='bx bx-error-circle id="error"'></i>`;
+        return false;
     }
-})
+    if(!valorNombre.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
+        nombreError.innerHTML = `<i class='bx bx-error-circle id="error"'></i>`;
+        return false;
+    }
+    nombreError.innerHTML = `<i class='bx bx-check-circle' id="check"></i>`;
+    return true;
+}
 
 
 
+//validar DNI
+function validarDNI () {
+    const valorDNI = dni.value;
 
-/*
-//form
-formulario.addEventListener("submit", validarForm);
+    if(valorDNI.length== 0){
+        dniError.innerHTML = `<i class='bx bx-error-circle id="error"'></i>`;
+        return false;
+    }
+    if(valorDNI.length !==8){
+        dniError.innerHTML = `<i class='bx bx-error-circle id="error"'></i>`;
+        return false;
+    }
+    if(!valorDNI.match(/^[0-9]{8}$/)){
+        dniError.innerHTML = `Solo ingresar numeros`;
+        return false;
+    }
+    dniError.innerHTML = `<i class='bx bx-check-circle' id="check"></i>`;
+    return true;
+}
 
-function validarForm(evento){
-    (email.value=="")||(nombre.value="")||(dni.value="")||(telefono.value="") ? evento.preventDefault () : []
-};
+
+//validar email
+function validarEmail (){
+    const valorEmail = email.value;
+
+    if(valorEmail.length == 0){
+        emailError.innerHTML = `<i class='bx bx-error-circle id="error"'></i>`;
+        return false;
+    }
+    if(!valorEmail.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+        emailError.innerHTML = `<i class='bx bx-error-circle id="error"'></i>`;
+        return false;
+    }
+    emailError.innerHTML = `<i class='bx bx-check-circle' id="check"></i>`;
+    return true;
+}
 
 
-//toastify     
-if (validarForm){
-    botonFinal.addEventListener('click', () => {
+//validar telefono
+function validarTelefono () {
+    const valorTelefono = telefono.value;
+
+    if(valorTelefono.length== 0){
+        telefonoError.innerHTML = `<i class='bx bx-error-circle id="error"'></i>`;
+        return false;
+    }
+    if(valorTelefono.length !==10){
+        telefonoError.innerHTML = `<i class='bx bx-error-circle id="error"'></i>`;
+        return false;
+    }
+    if(!valorTelefono.match(/^[0-9]{10}$/)){
+        telefonoError.innerHTML = `Solo ingresar numeros`;
+        return false;
+    }
+    telefonoError.innerHTML = `<i class='bx bx-check-circle' id="check"></i>`;
+    return true;
+}
+
+
+
+//validar formulario
+function validarFormulario (){
+    if(!validarNombre () || !validarDNI () || !validarEmail() || !validarTelefono()){
         Toastify({
-            text: 'ERROR, debe llenar todos los campos.',
-            duration: 3000,
+            text: 'Completá todos los campos correctamente.',
+            duration: 1000,
             position: 'center',
             gravity: 'bottom',
             style: {
                 background: '#000000'
             }
         }).showToast ();
-    });
-}
-
-
-//expresiones
-const expresiones = {
-	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,//letras y espacios
-	dni: /^\d{8}$/,//numeros
-	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,//formato email
-	telefono: /^\d{7,14}$/ //numeros
-}
-
-const campos = {
-    nombre: false,
-    dni: false,
-    email: false,
-    telefono: false
-}
-    
-
-//validar form
-const validarFormulario = (e) => {
-    switch (e.target.name) {
-        case "name":
-            if(expresiones.nombre.test(e.target.value)){
-                campos["nombre"]=true;
-            }else{
-                campos["nombre"]=false;
-            }
-        break;
-
-        case "dni":
-            if(expresiones.dni.test(e.target.value)){
-                campos["dni"]=true;
-            }else{
-                campos["dni"]=false;
-            }
-        break;
-
-        case "email":
-            if(expresiones.email.test(e.target.value)){
-                campos["email"] =true;
-            }else{
-                campos["email"]=false;
-            }
-        break;
-
-        case "phone":
-            if(expresiones.telefono.test(e.target.value)){
-                campos["telefono"] =true;
-            }else{
-                campos["telefono"]=false;
-            }
-        break;
+        return false;
     }
 }
-
-
-//validar datos
-inputs.forEach((input) => {
-    input.addEventListener('keyup', validarFormulario);
-    input.addEventListener('blur', validarFormulario);
-})
-
-
-
-formulario.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    if(campos.nombre && campos.dni && campos.email && campos.telefono){
-        botonFinal.addEventListener('click', () => {
-            Toastify({
-                text: 'ok',
-                duration: 1000,
-                position: 'center',
-                gravity: 'bottom',
-                style: {
-                    background: '#000000'
-                }
-            }).showToast ();
-        });
-    }
-});
-*/

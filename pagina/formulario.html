@@ -42,7 +42,8 @@
                     <div class="form-control" id="form-nombre">
                         <label for="name" class="labelNombre">Nombre y Apellido*</label>
                         <div class="form-input">
-                            <input type="text" name="name" id="name" placeholder="NOMBRE" class="input">
+                            <input type="text" name="name" id="name" placeholder="NOMBRE" class="input" onkeyup="validarNombre()">
+                            <span id="nombreError"></span>
                         </div>
                     </div>
                     
@@ -50,7 +51,8 @@
                     <div class="form-control" id="form-dni">
                         <label for="dni">DNI*</label>
                         <div class="form-input">
-                            <input type="text" name="dni" placeholder="DNI" maxlength="10" id="dni" class="input">
+                            <input type="text" name="dni" placeholder="DNI" maxlength="10" id="dni" class="input" onkeyup="validarDNI()">
+                            <span id="dniError"></span>
                         </div>
                     </div>
                     
@@ -58,7 +60,8 @@
                     <div class="form-control" id="form-email">
                         <label for="email">Correo*</label>
                         <div class="form-input">
-                            <input type="email" name="email" id="email" placeholder="CORREO" class="input">
+                            <input type="email" name="email" id="email" placeholder="CORREO" class="input" onkeyup="validarEmail()">
+                            <span id="emailError"></span>
                         </div>
                     </div>
 
@@ -66,13 +69,14 @@
                         <label for="phone">Telefono*</label>
                         <div class="form-input">
                             <input type="text" name="phone" 
-                            placeholder="TELEFONO" maxlength="10" id="phone" class="input">
+                            placeholder="TELEFONO" maxlength="10" id="phone" class="input" onkeyup="validarTelefono()">
+                            <span id="telefonoError"></span>
                         </div>
                     </div>
 
                     <div class= "text-muted">* = campo obligatorio</div>
 
-                    <button id="botonFinal" type="submit" class="botonForm btn-buy">TERMINAR COMPRA</button>
+                    <button id="botonFinal" type="submit" class="botonForm btn-buy" onclick="return validarFormulario()">TERMINAR COMPRA</button>
                 </div>
                     
             </div>
