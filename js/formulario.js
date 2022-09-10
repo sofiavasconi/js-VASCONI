@@ -90,9 +90,22 @@ function validarTelefono () {
 
 
 
-//validar formulario
-function validarFormulario (){
-    if(!validarNombre () || !validarDNI () || !validarEmail() || !validarTelefono()){
+//confirmar compra
+botonFinal.onclick = ((e) => {
+    e.preventDefault();
+
+    if(validarNombre () && validarDNI () && validarEmail() && validarTelefono ()){
+        Toastify({
+            text: 'Tu compra ha sido realizada con éxito! Nos vamos a comunicar con vos vía mail.',
+            duration: 1000,
+            position: 'center',
+            gravity: 'bottom',
+            style: {
+                background: '#000000'
+            }
+        }).showToast ();
+        return true
+    } else if(!validarNombre () || !validarDNI () || !validarEmail() || !validarTelefono()){
         Toastify({
             text: 'Completá todos los campos correctamente.',
             duration: 1000,
@@ -104,21 +117,6 @@ function validarFormulario (){
         }).showToast ();
         return false;
     }
-}
-
-/*
-//confirmar compra
-botonFinal.onclick = (() => {
-    if(validarNombre && validarDNI && validarEmail && validarTelefono){
-        Toastify({
-            text: 'Tu compra ha sido realizada con éxito! Nos vamos a comunicar con vos vía mail.',
-            duration: 1000,
-            position: 'center',
-            gravity: 'bottom',
-            style: {
-                background: '#000000'
-            }
-        }).showToast ();
-    }
 });
-*/
+
+
