@@ -95,9 +95,10 @@ botonFinal.onclick = ((e) => {
     e.preventDefault();
 
     if(validarNombre () && validarDNI () && validarEmail() && validarTelefono ()){
+        
         Toastify({
             text: 'Tu compra ha sido realizada con éxito! Nos vamos a comunicar con vos vía mail.',
-            duration: 1000,
+            duration: 6000,
             position: 'center',
             gravity: 'bottom',
             style: {
@@ -108,7 +109,7 @@ botonFinal.onclick = ((e) => {
     } else if(!validarNombre () || !validarDNI () || !validarEmail() || !validarTelefono()){
         Toastify({
             text: 'Completá todos los campos correctamente.',
-            duration: 1000,
+            duration: 2000,
             position: 'center',
             gravity: 'bottom',
             style: {
@@ -118,5 +119,3 @@ botonFinal.onclick = ((e) => {
         return false;
     }
 });
-
-
